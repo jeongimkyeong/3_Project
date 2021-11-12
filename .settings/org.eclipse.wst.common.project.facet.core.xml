@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
   <runtime name="3_Project"/>
-  <secondary-runtime name="1112Server"/>
   <fixed facet="java"/>
   <fixed facet="wst.jsdt.web"/>
   <fixed facet="jst.web"/>
