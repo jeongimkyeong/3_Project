@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-test22222222222asas
-pull하고 추가내용
+test
 </body>
 </html>
