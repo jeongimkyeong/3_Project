@@ -32,7 +32,7 @@
                 <a href="#">강사소개</a>
                 <a href="#">교재소개</a>
                 <a href="#">커뮤니티</a>
-                <a href="#">고객센터</a>
+                <a href="/SubPage/SCenter/Notice/List.jsp">고객센터</a>
             </div>
             
             <div class="smeWrap">
@@ -94,7 +94,7 @@
 	                </ul>
 	                <ul>
 	                    <li>
-	                        <a href="#">공지사항</a>
+	                        <a href="/SubPage/SCenter/Notice/List.jsp">공지사항</a>
 	                    </li>
 	                    <li>
 	                        <a href="#">자주묻는질문</a>
