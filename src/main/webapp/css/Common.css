@@ -1,0 +1,35 @@
+@charset "UTF-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,form,fieldset,p,button,select{margin:0;padding:0}
+img,fieldset{border:0;vertical-align:middle}
+
+ul,ol,li,dl{list-style:none}
+input,select,textarea{vertical-align:middle;font-family:'Nanum Gothic','Malgun Gothic',dotum,Helvetica,sans-serif;}
+table caption{display:none}
+table{border-collapse:collapse}
+em{font-style:normal}
+
+body {
+    background: #fff;
+    font-family: 'Nanum Gothic','Malgun Gothic',dotum,Helvetica,sans-serif;
+    font-size: 13px;
+    color: #666;
+    line-height: 18px;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+div {
+    display: block;
+}
+
+A:link{text-decoration:none;color:#444;}
+A:hover{text-decoration:none;color:#272c3a}
+A:visited{text-decoration:none;color:#444}
+A:active{text-decoration:none;color:#444}
+
+.header{width:100%;position:relative}
+.container{width:100%;overflow:hidden}
+.smain{width:1080px;margin:0 auto;padding:50px 0;overflow:hidden;display:table;}
+.mWrap{width:1020px;margin:15px auto 60px;overflow:hidden}
+.mbg{background:url(img/mbg.png) no-repeat;font-size:0;text-indent:-9999px;vertical-align:middle}

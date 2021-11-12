@@ -1,0 +1,74 @@
+@charset "UTF-8";
+.fWrap {
+    width:100%;
+    margin:100px 0 0;
+    height:450px;
+}
+
+.fmenu {
+    border-top:1px solid #D5D5D5;
+    border-bottom:1px solid #D5D5D5;
+    height:58px;
+}
+
+.fmenu ul {
+    width:1080px;
+    margin:0 auto;
+    height:58px;
+    line-height:58px;
+    overflow:hidden;
+}
+
+.fme {
+    float:left;
+}
+
+.fme a { 
+    margin:0 30px 0 0;
+    font-size:14px;
+}
+
+.ftop {
+    float:right;
+    border-left:1px solid #eaeaea;
+    border-right:1px solid #eaeaea;
+    width:140px;
+    text-align:center;
+}
+
+.ftop a { 
+    display:block;
+    font-size:18px;
+}
+
+.ftop a:hover {
+    background:#f6f6f6;
+    text-decoration:none;
+}
+
+.footer {
+    width:1080px;
+    margin:0 auto;
+    padding:50px 0;
+    height:100px;
+}
+
+.fcopy {
+    line-height:1.6;
+    width:700px;
+    float:left;
+    color:#999;
+}
+
+.flogo {
+    float:right;
+    width:220px;
+}
+
+.fcopy strong {
+    font-weight:400;
+    font-size:14px;
+    color:#000;
+}
+
+.fcopy p {padding:10px 0 0}
