@@ -14,7 +14,7 @@
         <div class="tWrap">
             <h1>
                 <a href="/Main.jsp">
-                <img src="img/hLogo.png">
+                <img src="/img/hLogo.png">
                 </a>
             </h1>
             <div class="tmenu">

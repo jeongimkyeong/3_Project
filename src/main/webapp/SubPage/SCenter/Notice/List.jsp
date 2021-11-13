@@ -107,13 +107,13 @@
                     </tbody>
                 </table>
                 <div class="paging">
-                    <img src="img/fpage.gif" alt="처음페이지">
-                    <img src="img/back.gif" alt="이전페이지">
+                    <img src="/img/fpage.gif" alt="처음페이지">
+                    <img src="/img/back.gif" alt="이전페이지">
         
                     <strong>1</strong>
         
-                    <img src="img/next.gif" alt="다음페이지">
-                    <img src="img/lpage.gif" alt="마지막페이지">
+                    <img src="/img/next.gif" alt="다음페이지">
+                    <img src="/img/lpage.gif" alt="마지막페이지">
                 </div>
                 <form name="sform" method="post" action="#">
                     <div class="boardSch">
