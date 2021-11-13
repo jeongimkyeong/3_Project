@@ -52,57 +52,28 @@
         </div>
         <div class="content">
             <div class="cont_tit">
-                <h3>공지사항</h3>
+                <h3>자주묻는질문</h3>
             </div>
             <div class="scont">
                 <table class="btbl" style="width: 830px;">
                     <colgroup>
-                        <col style="width: 10%;">
-                        <col style="width: 75%;">
                         <col style="width: 15%;">
+                        <col style="width: 85%;">
                     </colgroup>
                     <thead>
                         <tr>
                             <th>번호</th>
-                            <th>제목</th>
-                            <th class="bkn">등록일</th>
+                            <th class="bkn">제목</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>6</td>
-                            <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
-                        </tr>
-        
-                        <tr>
-                            <td>5</td>
-                            <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
-                        </tr>
-        
-                        <tr>
-                            <td>4</td>
-                            <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
-                        </tr>
-        
-                        <tr>
-                            <td>3</td>
-                            <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
-                        </tr>
-        
-                        <tr>
                             <td>2</td>
                             <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
                         </tr>
-        
                         <tr>
                             <td>1</td>
                             <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
                         </tr>
                     </tbody>
                 </table>

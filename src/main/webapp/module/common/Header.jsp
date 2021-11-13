@@ -97,10 +97,10 @@
 	                        <a href="/SubPage/SCenter/Notice/List.jsp">공지사항</a>
 	                    </li>
 	                    <li>
-	                        <a href="#">자주묻는질문</a>
+	                        <a href="/SubPage/SCenter/Question/List.jsp">자주묻는질문</a>
 	                    </li>
 	                    <li>
-	                        <a href="#">문의게시판</a>
+	                        <a href="/SubPage/SCenter/Inquiryn/List.jsp">문의게시판</a>
 	                    </li>                                                               
 	                </ul>                                                                                
 	            </div>
