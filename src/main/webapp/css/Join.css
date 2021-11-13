@@ -1,0 +1,79 @@
+@charset "UTF-8";
+.stepjoin{
+	text-align:center;
+	margin:80px 0px 40px;
+}
+.stepjoin ul{
+	display:inline-block;
+	padding:0px;
+}
+.stepjoin ul .on{
+	color:red;
+}
+.stepjoin1212 li{
+	padding:64px 0px 0px;
+	float:left;
+	position:relative;
+	width:140px;
+}
+.stepjoin li {
+    float: left;
+    width: 140px;
+    margin: 0 26px;
+    padding: 64px 0 0;
+    line-height: 24px;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    color: #888;
+}
+.stepspan {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 45px;
+}
+form{
+	display:block;
+}
+.checkbox{
+	background-color:#f6f6f6;
+	padding:30px 0px 80px;
+	border-top:1px solid lightgray;
+	border-bottom:1px solid lightgray;
+	width:890px;
+	margin:0 auto;
+}
+.subtitle{
+	padding:0 0 18px 34px;
+}
+.infobox{
+	margin:0px auto;
+	width:860px;
+}
+.scrollbox{
+	background-color:white;
+	height:200px;
+	padding:15px;
+	overflow-y:scroll;
+}
+.agreecheckbox{
+	padding:12px 0px 0px;
+}
+.checkbutton{
+	text-align:center;
+	padding:50px;
+}
+.checkbutton a{
+	border:1px solid black;
+	padding: 14px 34px;
+	font-size:20px;
+}
+
+.chkbtna{
+	background-color:black;
+
+}
+.chkbtna span{
+	color:#fff;
+}

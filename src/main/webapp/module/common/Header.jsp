@@ -18,8 +18,8 @@
                 </a>
             </h1>
             <div class="tmenu">
-                <a href="#">로그인</a>
-                <a href="#">회원가입</a>
+                <a href="/module/Login/Login.jsp">로그인</a>
+                <a href="/module/Join/Join.jsp">회원가입</a>
                 <a href="#">장바구니</a>
                 <a href="#">내강의실</a>
             </div>
