@@ -33,7 +33,7 @@
                 </dl>
                 <dl>
                     <dt>
-                        <a href="/SubPage/SCenter/Inquiry/List.jsp">문의게시판</a>
+                        <a href="/SubPage/SCenter/Inquiryn/List.jsp">문의게시판</a>
                     </dt>
                 </dl>                                
             </div>
@@ -57,52 +57,28 @@
             <div class="scont">
                 <table class="btbl" style="width: 830px;">
                     <colgroup>
-                        <col style="width: 10%;">
-                        <col style="width: 75%;">
-                        <col style="width: 15%;">
+                        <col style="width: 12%;">
+                        <col style="width: 44%;">
+                        <col style="width: 16%;">
+                        <col style="width: 16%;">
+                        <col style="width: 12%;">
                     </colgroup>
                     <thead>
                         <tr>
                             <th>번호</th>
                             <th>제목</th>
-                            <th class="bkn">등록일</th>
+                            <th>작성자</th>
+                            <th>등록일</th>
+                            <th class="bkn">답변</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>6</td>
-                            <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
-                        </tr>
-        
-                        <tr>
-                            <td>5</td>
-                            <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
-                        </tr>
-        
-                        <tr>
-                            <td>4</td>
-                            <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
-                        </tr>
-        
-                        <tr>
-                            <td>3</td>
-                            <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
-                        </tr>
-        
-                        <tr>
-                            <td>2</td>
-                            <td class="tl"><a href="#">내용</a></td>
-                            <td>2021-00-00</td>
-                        </tr>
-        
-                        <tr>
                             <td>1</td>
-                            <td class="tl"><a href="#">내용</a></td>
+                            <td class="tl"><a href="#">환불계좌문의</a></td>
+                            <td>정**</td>
                             <td>2021-00-00</td>
+                            <td class="dbtn">대기</td>
                         </tr>
                     </tbody>
                 </table>
