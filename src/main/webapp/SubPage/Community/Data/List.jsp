@@ -17,23 +17,23 @@
 <div class="smain">
         <div class="leftbWrap"> <!--nlnbWrap-->
             <h2>
-                <span>CS CENTER</span>
-                고객센터
+                <span>BBS</span>
+                커뮤니티
             </h2>
             <div class="leftb"> <!-- nlnb-->
                 <dl>
                     <dt>
-                        <a href="/SubPage/SCenter/Notice/List.jsp">공지사항</a>
+                        <a href="/SubPage/Community/FreeBoard/List.jsp">자유게시판</a>
                     </dt>
                 </dl>
                 <dl>
                     <dt>
-                        <a href="/SubPage/SCenter/Question/List.jsp">자주묻는질문</a>
+                        <a href="/SubPage/Community/PassNote/List.jsp">합격수기</a>
                     </dt>
                 </dl>
                 <dl>
                     <dt>
-                        <a href="/SubPage/SCenter/Inquiryn/List.jsp">문의게시판</a>
+                        <a href="/SubPage/Community/Data/List.jsp">자료실</a>
                     </dt>
                 </dl>                                
             </div>
@@ -52,7 +52,7 @@
         </div>
         <div class="content">
             <div class="cont_tit">
-                <h3>문의게시판</h3>
+                <h3>자료실</h3>
             </div>
             <div class="scont">
                 <table class="btbl" style="width: 830px;">
@@ -69,16 +69,16 @@
                             <th>제목</th>
                             <th>작성자</th>
                             <th>등록일</th>
-                            <th class="bkn">답변</th>
+                            <th class="bkn">조회수</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td class="tl"><a href="#">환불계좌문의</a></td>
-                            <td>정**</td>
+                            <td class="tl"><a href="#">내용</a></td>
+                            <td>홍길동</td>
                             <td>2021-00-00</td>
-                            <td class="dbtn">대기</td>
+                            <td>0</td>
                         </tr>
                     </tbody>
                 </table>

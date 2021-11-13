@@ -31,7 +31,7 @@
                 <a href="#">수강신청</a>
                 <a href="#">강사소개</a>
                 <a href="#">교재소개</a>
-                <a href="#">커뮤니티</a>
+                <a href="/SubPage/Community/FreeBoard/List.jsp">커뮤니티</a>
                 <a href="/SubPage/SCenter/Notice/List.jsp">고객센터</a>
             </div>
             
@@ -83,13 +83,13 @@
 	                </ul> 
 	                <ul>
 	                    <li>
-	                        <a href="#">자유게시판</a>
+	                        <a href="/SubPage/Community/FreeBoard/List.jsp">자유게시판</a>
 	                    </li>
 	                    <li>
-	                        <a href="#">합격수기</a>
+	                        <a href="/SubPage/Community/PassNote/List.jsp">합격수기</a>
 	                    </li>
 	                    <li>
-	                        <a href="#">자료실</a>
+	                        <a href="/SubPage/Community/Data/List.jsp">자료실</a>
 	                    </li>                                                               
 	                </ul>
 	                <ul>
@@ -100,7 +100,7 @@
 	                        <a href="/SubPage/SCenter/Question/List.jsp">자주묻는질문</a>
 	                    </li>
 	                    <li>
-	                        <a href="/SubPage/SCenter/Inquiryn/List.jsp">문의게시판</a>
+	                        <a href="/SubPage/SCenter/Inquiry/List.jsp">문의게시판</a>
 	                    </li>                                                               
 	                </ul>                                                                                
 	            </div>
