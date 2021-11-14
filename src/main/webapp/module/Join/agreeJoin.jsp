@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Join Page</title>
-<%@ include file="/module/JoinLink.jsp" %>
+<%@ include file="/module/LoginJoinLink.jsp" %>
 </head>
 <body>
 <%@ include file="/module/common/Header.jsp" %>
@@ -13,9 +13,9 @@
 
 	<div class="stepjoin">
 		<ul>
-			<li class="on">약관동의<span class="stepspan"><img src="/img/imsi1.png" style="width:50px; height:50px;"></span></li>
-			<li>회원정보 입력<span class="stepspan"><img src="/img/imsi2.png" style="width:50px; height:50px;"></span></li>
-			<li>가입완료<span class="stepspan"><img src="/img/imsi3.png" style="width:50px; height:50px;"></span></li>
+			<li >약관동의<span class="stepspan" style="color:#888;"><i class="far fa-calendar-check fa-3x"></i></span></li>
+			<li class="on">회원정보 입력<span class="stepspan"><i class="far fa-address-card fa-3x"></i></span></li>
+			<li>가입완료<span class="stepspan"><i class="fas fa-calendar-check fa-3x"></i></span></li>
 		</ul>
 	</div>
 	
@@ -37,8 +37,8 @@
 		</div>
 	</form>
 	<div class="checkbutton">
-		<a href="#" class="chkbtna"><span>동의하기</span></a>
-		<a href="#">취소하기</a>
+		<a href="/module/Join/memberJoin.jsp" class="chkbtna"><span>동의하기</span></a>
+		<a href="/MainPage.jsp">취소하기</a>
 	</div>
 </div>
 <%@ include file="/module/common/Footer.jsp" %>

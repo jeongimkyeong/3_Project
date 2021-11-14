@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 
 
-<%@ include file="/module/LoginLink.jsp" %>
+<%@ include file="/module/LoginJoinLink.jsp" %>
 
 </head>
 <body>

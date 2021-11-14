@@ -8,8 +8,9 @@
 	<!--로그인페이지 css-->
 	<link href="/css/Common.css" rel="stylesheet" type="text/css">
 	<link  href="/css/Header.css" rel="stylesheet" type="text/css">
-	<link  href="/css/Login.css" rel="stylesheet" type="text/css">
+	<link  href="/css/LoginJoin.css" rel="stylesheet" type="text/css">
 	<link href="/css/Footer.css" rel="stylesheet" type="text/css">
+	<script src="https://kit.fontawesome.com/aa7ea2666e.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
