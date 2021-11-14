@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <%@include file="/module/CLink.jsp" %>
+    <link href="/css/CSlist.css" rel="stylesheet" type="text/css">
+    <%@include file="/module/ConLink.jsp" %>
 </head>
 <body>
 <!-- Header -->
@@ -23,17 +24,17 @@
             <div class="leftb"> <!-- nlnb-->
                 <dl>
                     <dt>
-                        <a href="/SubPage/SCenter/Notice/List.jsp">공지사항</a>
+                        <a href="/SubPage/CScenter/Notice/List.jsp">공지사항</a>
                     </dt>
                 </dl>
                 <dl>
                     <dt>
-                        <a href="/SubPage/SCenter/Question/List.jsp">자주묻는질문</a>
+                        <a href="/SubPage/CScenter/Question/List.jsp">자주묻는질문</a>
                     </dt>
                 </dl>
                 <dl>
                     <dt>
-                        <a href="/SubPage/SCenter/Inquiryn/List.jsp">문의게시판</a>
+                        <a href="/SubPage/CScenter/Inquiry/List.jsp">문의게시판</a>
                     </dt>
                 </dl>                                
             </div>
@@ -52,33 +53,24 @@
         </div>
         <div class="content">
             <div class="cont_tit">
-                <h3>문의게시판</h3>
+                <h3>자주묻는질문</h3>
             </div>
             <div class="scont">
                 <table class="btbl" style="width: 830px;">
                     <colgroup>
-                        <col style="width: 12%;">
-                        <col style="width: 44%;">
-                        <col style="width: 16%;">
-                        <col style="width: 16%;">
-                        <col style="width: 12%;">
+                        <col style="width: 15%;">
+                        <col style="width: 85%;">
                     </colgroup>
                     <thead>
                         <tr>
                             <th>번호</th>
-                            <th>제목</th>
-                            <th>작성자</th>
-                            <th>등록일</th>
-                            <th class="bkn">답변</th>
+                            <th class="bkn">제목</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td class="tl"><a href="#">환불계좌문의</a></td>
-                            <td>정**</td>
-                            <td>2021-00-00</td>
-                            <td class="dbtn">대기</td>
+                            <td class="tl"><a href="/SubPage/CScenter/Question/Read.jsp">내용</a></td>
                         </tr>
                     </tbody>
                 </table>

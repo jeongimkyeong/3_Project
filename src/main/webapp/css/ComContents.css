@@ -92,67 +92,6 @@
     letter-spacing:-1px
 }
 
-.btbl {
-    margin: 0 0 40px;
-    text-align: center;
-    border-top: 1px solid #282e38;
-    font-size: 14px;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-colgroup {
-    display: table-column-group;
-}
-
-col {
-    display: table-column;
-}
-
-thead {
-    display: table-header-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-
-tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-}
-
-.btbl thead th:first-child, .btbl td:first-child {
-    border-left: 0;
-}
-
-.btbl thead th {
-    border-bottom: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    background: #f7f7f7;
-    padding: 15px;
-    color: #111;
-    font-weight: 400;
-}
-
-tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-
-.btbl td {
-    border-bottom: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    padding: 10px;
-    line-height: 22px;
-}
-
-td.tl {
-    text-align: left;
-}
-
 .paging {
     text-align: center;
     margin: 0 0 50px;
