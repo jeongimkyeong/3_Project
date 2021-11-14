@@ -99,5 +99,6 @@
 	</div>
 </div>
 <%@ include file="/module/common/Footer.jsp" %>
+<!-- merge 테스트 문구 -->
 </body>
 </html>
