@@ -7,10 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!--메인페이지 css-->
+	<!--페이지 공통 css-->
 	<link rel="stylesheet" href="css/Common.css">
 	<link rel="stylesheet" href="css/Header.css">
 	<link rel="stylesheet" href="css/Footer.css">
-	<link rel="stylesheet" href="css/MainSection.css">
 </body>
 </html>

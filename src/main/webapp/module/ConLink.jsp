@@ -7,11 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!--메인페이지 css-->
+	<!--컨텐츠 공통 css-->
 	<link rel="stylesheet" href="/css/Common.css">
 	<link rel="stylesheet" href="/css/Header.css">
-	<link rel="stylesheet" href="/css/NoticeList.css">	
+	<link rel="stylesheet" href="/css/ComContents.css">	
 	<link rel="stylesheet" href="/css/Footer.css">
-
 </body>
 </html>

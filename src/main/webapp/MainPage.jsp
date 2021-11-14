@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<%@include file="/module/MainLink.jsp" %>
+<link rel="stylesheet" href="css/MainSection.css">
+<%@include file="/module/ComLink.jsp" %>
 </head>
 <body>
 	<div id="wrap">

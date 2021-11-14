@@ -32,7 +32,7 @@
                 <a href="#">강사소개</a>
                 <a href="#">교재소개</a>
                 <a href="/SubPage/Community/FreeBoard/List.jsp">커뮤니티</a>
-                <a href="/SubPage/SCenter/Notice/List.jsp">고객센터</a>
+                <a href="/SubPage/CScenter/Notice/List.jsp">고객센터</a>
             </div>
             
             <div class="smeWrap">
@@ -94,13 +94,13 @@
 	                </ul>
 	                <ul>
 	                    <li>
-	                        <a href="/SubPage/SCenter/Notice/List.jsp">공지사항</a>
+	                        <a href="/SubPage/CScenter/Notice/List.jsp">공지사항</a>
 	                    </li>
 	                    <li>
-	                        <a href="/SubPage/SCenter/Question/List.jsp">자주묻는질문</a>
+	                        <a href="/SubPage/CScenter/Question/List.jsp">자주묻는질문</a>
 	                    </li>
 	                    <li>
-	                        <a href="/SubPage/SCenter/Inquiry/List.jsp">문의게시판</a>
+	                        <a href="/SubPage/CScenter/Inquiry/List.jsp">문의게시판</a>
 	                    </li>                                                               
 	                </ul>                                                                                
 	            </div>

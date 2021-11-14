@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <%@include file="/module/CLink.jsp" %>
+    <link href="/css/CSread.css" rel="stylesheet" type="text/css">
+    <%@include file="/module/ConLink.jsp" %>
 </head>
 <body>
 <!-- Header -->
@@ -23,17 +24,17 @@
             <div class="leftb"> <!-- nlnb-->
                 <dl>
                     <dt>
-                        <a href="/SubPage/SCenter/Notice/List.jsp">공지사항</a>
+                        <a href="/SubPage/CScenter/Notice/List.jsp">공지사항</a>
                     </dt>
                 </dl>
                 <dl>
                     <dt>
-                        <a href="/SubPage/SCenter/Question/List.jsp">자주묻는질문</a>
+                        <a href="/SubPage/CScenter/Question/List.jsp">자주묻는질문</a>
                     </dt>
                 </dl>
                 <dl>
                     <dt>
-                        <a href="/SubPage/SCenter/Inquiry/List.jsp">문의게시판</a>
+                        <a href="/SubPage/CScenter/Inquiry/List.jsp">문의게시판</a>
                     </dt>
                 </dl>                                
             </div>
@@ -55,54 +56,40 @@
                 <h3>자주묻는질문</h3>
             </div>
             <div class="scont">
-                <table class="btbl" style="width: 830px;">
+                <table class="ftbl" style="width: 830px;">
                     <colgroup>
-                        <col style="width: 15%;">
-                        <col style="width: 85%;">
+                        <col style="width: 20%;">
+                        <col style="width: 30%;">
+                        <col style="width: 20%;">
+                        <col style="width: 30%;">
                     </colgroup>
                     <thead>
                         <tr>
-                            <th>번호</th>
-                            <th class="bkn">제목</th>
+                            <th>제목</th>
+                            <td colspan="3">회원가입은 무료인가요? </td>
+                        </tr>
+                        <tr>
+                            <th>작성일</th>
+                            <td>2021-00-00 오전 00:00:00 </td>
+                            <th>조회수</th>
+                            <td>00</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>2</td>
-                            <td class="tl"><a href="#">내용</a></td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="tl"><a href="#">내용</a></td>
+                        	<td class="cmt" colspan="4">
+                        	"회원가입은 무료입니다."
+                        	<br>
+                        	</td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="paging">
-                    <img src="/img/fpage.gif" alt="처음페이지">
-                    <img src="/img/back.gif" alt="이전페이지">
-        
-                    <strong>1</strong>
-        
-                    <img src="/img/next.gif" alt="다음페이지">
-                    <img src="/img/lpage.gif" alt="마지막페이지">
+                <div class="cbtn">
+                	<a href="/SubPage/CScenter/Question/List.jsp" class="mbtn">목록으로</a>
                 </div>
-                <form name="sform" method="post" action="#">
-                    <div class="boardSch">
-                        <fieldset>
-                            <select id="searchpart" name="searchpart" class="seltxt1 w100">
-                                <option value="0">제목</option>
-                                <option value="1">내용</option>
-                                <option value="2">제목+내용</option>
-                            </select>
-                            <input type="text" name="searchstr" id="searchstr" class="inptxt1" value="">
-                            <a href="#" class="fbtn grey">검색하기</a>
-                        </fieldset>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    
+			</div>                
+		</div>
+	</div>		                	    
 <!-- footer -->
 <%@include file="/module/common/Footer.jsp" %>    
 </body>

@@ -18,23 +18,23 @@
 <div class="smain">
         <div class="leftbWrap"> <!--nlnbWrap-->
             <h2>
-                <span>BBS</span>
-                커뮤니티
+                <span>CS CENTER</span>
+                고객센터
             </h2>
             <div class="leftb"> <!-- nlnb-->
                 <dl>
                     <dt>
-                        <a href="/SubPage/Community/FreeBoard/List.jsp">자유게시판</a>
+                        <a href="/SubPage/CScenter/Notice/List.jsp">공지사항</a>
                     </dt>
                 </dl>
                 <dl>
                     <dt>
-                        <a href="/SubPage/Community/PassNote/List.jsp">합격수기</a>
+                        <a href="/SubPage/CScenter/Question/List.jsp">자주묻는질문</a>
                     </dt>
                 </dl>
                 <dl>
                     <dt>
-                        <a href="/SubPage/Community/Data/List.jsp">자료실</a>
+                        <a href="/SubPage/CScenter/Inquiry/List.jsp">문의게시판</a>
                     </dt>
                 </dl>                                
             </div>
@@ -53,7 +53,7 @@
         </div>
         <div class="content">
             <div class="cont_tit">
-                <h3>자유게시판</h3>
+                <h3>문의게시판</h3>
             </div>
             <div class="scont">
                 <table class="btbl" style="width: 830px;">
@@ -70,16 +70,16 @@
                             <th>제목</th>
                             <th>작성자</th>
                             <th>등록일</th>
-                            <th class="bkn">조회수</th>
+                            <th class="bkn">답변</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td class="tl"><a href="#">제목내용</a></td>
-                            <td>홍길동</td>
+                            <td class="tl"><a href="/SubPage/CScenter/Inquiry/Read.jsp">환불계좌문의</a></td>
+                            <td>정**</td>
                             <td>2021-00-00</td>
-                            <td>0</td>
+                            <td class="dbtn">대기</td>
                         </tr>
                     </tbody>
                 </table>
