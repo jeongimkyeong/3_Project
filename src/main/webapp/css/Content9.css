@@ -1,0 +1,178 @@
+@charset "UTF-8";
+  .smain {
+            width: 1080px;
+            margin: 0 auto;
+            padding: 50px 0;
+            overflow: hidden;
+            display: table;
+        }
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, form, fieldset, p, button, select {
+            margin: 0;
+            padding: 0;
+        }
+        element.style {
+            cursor: pointer;
+        }
+
+        body {
+            background: #fff;
+            font-family: 'Nanum Gothic','Malgun Gothic',dotum,Helvetica,sans-serif;
+            font-size: 13px;
+            color: #666;
+            line-height: 18px;
+            font-weight: normal;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .content {
+            width: 800px;
+            float: left;
+            padding: 0 0 80px;
+            display: table-cell;
+            vertical-align: top;
+        }
+        .cont_tit {
+            padding: 20px 0;
+            line-height: 1.4;
+            color: #999;
+            line-height: 1.4;
+        }
+        .cont_tit h3 {
+            font-size: 28px;
+            color: #111;
+            font-weight: 500;
+            letter-spacing: -1px;
+        }
+        .btbl {
+            margin: 0 0 40 px;
+            text-align: center;
+            border-top: 1px solid #282e38;
+            font-size: 14px;
+        }
+        div {
+            display: block;
+        }
+        h3 {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            
+        }
+        h4 {
+            display: block;
+            margin-block-start: 1.33em;
+            margin-block-end: 1.33em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            
+        }
+        table {
+            border-collapse: collapse;
+            display: table;
+            box-sizing: border-box;
+            text-indent: initial;
+            border-spacing: 2px;
+            border-color: grey
+        }
+        colgroup {
+            display: table-column-group;
+        }
+        thead {
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+        tr {
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+        }
+        th {
+            display: table-cell;
+            vertical-align: inherit;
+            text-align: -internal-center;
+        }
+        td {
+            display: table-cell;
+            vertical-align: inherit;
+        }
+        .btbl thead th:first-child, .btbl td:first-child {
+            border-left: 0;
+        }
+    
+        .btbl thead th {
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            background: #f7f7f7;
+            padding: 15px;
+            color: #111;
+            font-weight: 400;
+        }
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+        .btbl td {
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            padding: 10px;
+            line-height: 22px;
+        }
+        .imgbox {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            padding: 1px;
+        }
+        img, fieldset {
+            vertical-align: middle;
+        }
+        .cont {
+            text-align: left;
+        }
+        .cont h4 {
+            font-weight: 500;
+            font-size: 16px;
+            color: #111;
+        }
+        A:link {
+            text-decoration: none;
+            color: #444;
+        }
+        a:-webkit-any-link {
+            cursor: pointer;
+            
+        }
+        .cont p {
+            margin: 6px 0 0;
+        }
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        .frprice {
+            color: #f84e51;
+            font-size: 18px;
+        }
+        strong {
+            font-weight: bold;
+        }
+
+        .sbtn {
+            display: block;
+            height: 26px;
+            line-height: 26px;
+            width: 92px;
+            vertical-align: middle;
+            font-size: 14px;
+            margin: 2px auto;
+            background: #fff;
+            border: 1px solid #3f3f3f;
+        }
