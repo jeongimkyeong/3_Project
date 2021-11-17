@@ -207,3 +207,11 @@ form{
 }
 
 /*여기까지 Join.css*/
+.stepjoin h1{
+	font-weight: 400;
+	font-size: 30px;
+    color: #111;
+}
+.checkbox p{
+	text-align:center;
+}
