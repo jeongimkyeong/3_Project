@@ -30,7 +30,7 @@
                 <a href="#">학원소개</a>
                 <a href="#">수강신청</a>
                 <a href="#">강사소개</a>
-                <a href="#">교재소개</a>
+                <a href="/SubPage/Book/Firstbooklist.jsp">교재소개</a>
                 <a href="/SubPage/Community/FreeBoard/List.jsp">커뮤니티</a>
                 <a href="/SubPage/CScenter/Notice/List.jsp">고객센터</a>
             </div>

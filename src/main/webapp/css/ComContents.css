@@ -41,7 +41,30 @@
     border-bottom: 1px solid #e2e2e2;
     line-height: 16px;
 }
-
+/*booklist leftb 추가내용 css 숨겼다보이기*/
+.leftb dd{
+	padding:12px 15px;
+	display:none;
+}
+.firstdl:hover dd{
+	display:block;
+}
+.secondtdl:hover dd{
+	display:block;
+}
+.thirddl:hover dd{
+	display:block;
+}
+.leftb dd a{
+	display:block;
+	padding:6px 0px 6px 8px;
+	border-bottom:1px solid #e2e2e2;
+	color:#666;
+}
+.leftb dd a:last-child{
+	border-bottom:0;
+}
+/*추가내용끝*/
 .leftcs {
     border: 1px solid #ddd;
     padding: 20px;
@@ -170,4 +193,51 @@ option {
 .boardSch .fbtn {
     position: absolute;
     right: 0;
+}
+
+/*booklist부분*/
+
+.itemtitle{
+	padding:30px 0px;
+}
+.itemtitle h1{
+	color:#111;
+	font-weight:500;
+}
+.itemli{
+	width:170px;
+	height:220px;
+	text-align:center;
+	margin:0px 15px 70px 0px;
+	float: left;
+	padding:0 0 50px;
+}
+
+.itemli img {
+    width: 150px;
+    height: 180px;
+    display: block;
+    margin: 0 0 20px;
+}
+.itemli h3{
+	font-weight:400;
+	color:#000;
+}
+.itemli em{
+	display:block;
+	font-size:13px;
+	margin:0 0 10px;
+}
+.itemli strong{
+	color:#cc3333;
+	margin-right:5px;
+}
+.itembtn{
+	border:1px solid #3f3f3f;
+	display:inline-block;
+	padding:5px 12px 4px;
+}
+.paging{
+	text-align:center;
+	margin:0 0 50px;
 }
