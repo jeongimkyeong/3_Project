@@ -56,6 +56,7 @@ a span{
     position: absolute;
     right: 90px;
     top: 100px;
+    cursor:pointer;
 }
 .loginbutton span{
 	color:#fff;
