@@ -50,10 +50,10 @@
 	                </ul>
 	                <ul>
 	                    <li>
-	                        <a href="#">프리패스신청</a>
+	                        <a href="/SubPage/SignUp/Freepass.jsp">프리패스신청</a>
 	                    </li>
 	                    <li>
-	                        <a href="#">9급공무원</a>
+	                        <a href="/SubPage/SignUp/Contents9.jsp">9급공무원</a>
 	                    </li>
 	                    <li>
 	                        <a href="#">경찰공무원</a>
