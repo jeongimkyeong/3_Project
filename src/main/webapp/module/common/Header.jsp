@@ -28,7 +28,7 @@
         <div class="meWrap">
             <div class="menu">
                 <a href="#">학원소개</a>
-                <a href="#">수강신청</a>
+                <a href="/SubPage/SignUp/Contents9.jsp">수강신청</a>
                 <a href="#">강사소개</a>
                 <a href="/SubPage/Book/Mainbooklist.jsp">교재소개</a>
                 <a href="/SubPage/Community/FreeBoard/List.jsp">커뮤니티</a>
@@ -50,13 +50,13 @@
 	                </ul>
 	                <ul>
 	                    <li>
-	                        <a href="#">프리패스신청</a>
+	                        <a href="/SubPage/SignUp/Freepass.jsp">프리패스신청</a>
 	                    </li>
 	                    <li>
-	                        <a href="#">9급공무원</a>
+	                        <a href="/SubPage/SignUp/Contents9.jsp">9급공무원</a>
 	                    </li>
 	                    <li>
-	                        <a href="#">경찰공무원</a>
+	                        <a href="/SubPage/SignUp/Police.jsp">경찰공무원</a>
 	                    </li>                                                            
 	                </ul>
 	                <ul>
