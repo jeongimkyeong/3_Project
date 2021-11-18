@@ -130,6 +130,9 @@ form{
 .agreecheckbox{
 	padding:12px 0px 0px;
 }
+.agreecheckbox label:hover{
+	cursor:pointer;
+}
 .checkbutton{
 	text-align:center;
 	padding:50px;
@@ -142,7 +145,7 @@ form{
 
 .chkbtna{
 	background-color:black;
-
+	cursor: pointer;
 }
 .chkbtna span{
 	color:#fff;
