@@ -10,6 +10,19 @@
 <%@ include file="/module/LoginJoinLink.jsp" %>
 
 </head>
+<script>
+	function loginCheck(){
+		if( loginform.userid.value==""){
+			alert("아이디를 입력하세요");
+			return loginform.userid.focus();
+		}
+		if(loginform.pwd.value==""){
+			alert("비밀번호를 입력하세요");
+			return loginform.pwd.focus();
+		}
+		loginform.submit();
+	}
+</script>
 <body>
 <%@ include file="/module/common/Header.jsp" %>
 <div class="sectioncontent">
@@ -17,14 +30,14 @@
 		<div class="logintitle">
 				<h1>LOGIN</h1>
 		</div>
-		<form name="loginform" method="post" action="">
+		<form name="loginform" method="post" action="/auth/Login.do">
 			<div class="loginformbox">
 				<p>아이디가 없으면 무료 회원가입을 해주시기 바랍니다</p>
 				<ul>
 					<li><input type="text" name="userid" placeholder="아이디" value="" class="logininput"></li>
 					<li><input type="password" name="pwd" placeholder="비밀번호" value="" class="logininput"></li>
 				</ul>
-				<a href="#" class="loginbutton"><span>로그인</span></a>
+				<a class="loginbutton" onclick="loginCheck()"><span>로그인</span></a>
 			</div>
 		</form>
 		<div class="findlink">
