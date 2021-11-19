@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import controller.auth.AuthLoginController;
 import controller.auth.AuthLogoutController;
+import controller.board.BoardPostController;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -24,6 +25,9 @@ public class FrontController extends HttpServlet{
 		//인증
 		list.put("/auth/Login.do",new AuthLoginController());
 		list.put("/auth/Logout.do", new AuthLogoutController());
+		
+		//게시판
+		list.put("/board/post.do",new BoardPostController());
 	}
 	
 
