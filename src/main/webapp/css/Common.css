@@ -24,7 +24,7 @@ div {
 }
 
 A:link{text-decoration:none;color:#444;}
-A:hover{text-decoration:none;color:#272c3a}
+A:hover{text-decoration:none;color:#272c3a; }
 A:visited{text-decoration:none;color:#444}
 A:active{text-decoration:none;color:#444}
 

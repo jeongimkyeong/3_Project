@@ -29,6 +29,7 @@ h1 {
     top: 44px;
     right: 0;
     overflow: hidden;
+    cursor:pointer;
 }
 
 .tmenu a {
