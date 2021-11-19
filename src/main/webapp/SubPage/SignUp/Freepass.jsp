@@ -10,6 +10,9 @@
 </head>
 
 <body>
+<!-- Header -->
+<%@include file="/module/common/Header.jsp" %>
+
 	<div class="smain">  
 	
             <div class="nlnbWrap">
@@ -117,7 +120,8 @@
             </div>
         </div>
         
-        
+<!-- footer -->
+<%@include file="/module/common/Footer.jsp" %>           
 
 </body>
 </html>

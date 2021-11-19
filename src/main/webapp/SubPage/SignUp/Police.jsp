@@ -8,6 +8,9 @@
 <link href="/css/Content9.css"  type="text/css" rel="stylesheet">
 </head>
 <body>
+<!-- Header -->
+<%@include file="/module/common/Header.jsp" %>
+
 	<div class="content">
     	<div class="cont_tit">
         	<h3>경찰공무원</h3>
@@ -71,5 +74,8 @@
 
         </div>
     </div>
+    
+<!-- footer -->
+<%@include file="/module/common/Footer.jsp" %>    
 </body>
 </html>

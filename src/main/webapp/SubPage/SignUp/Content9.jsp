@@ -9,6 +9,9 @@
 
 </head>
 <body>
+<!-- Header -->
+<%@include file="/module/common/Header.jsp" %>
+
 	 <div class="content">
     	<div class="cont_tit">
         	<h3>9급공무원</h3>
@@ -98,5 +101,8 @@
 
         </div>
     </div>
+    
+<!-- footer -->
+<%@include file="/module/common/Footer.jsp" %>        
 </body>
 </html>
