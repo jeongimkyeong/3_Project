@@ -11,6 +11,35 @@
     <%@include file="/module/ConLink.jsp" %>
 </head>
 <body>
+<%
+	int totalRecode=0; 	//전체 게시물수 저장
+	int numPerPage=10; 	//한 페이지당 표시할 게시물의 수(10개)
+	int pagePerBlock=15;//블럭당 표시할 페이지 수
+	
+	int totalPage=0;	//전체 페이지 수
+	int totalBlock=0;	//전체 블록 수
+	
+	int nowPage=1;		//현재 페이지
+	int nowBlock=1;		//현재 블럭
+	
+	int start=0;		//DB로부터 가져올 게시물의 시작 Num
+	int end=10; 		//Start로부터 10개까지의 게시물을 가져옴
+	
+	int listSize=0;		//현재 읽어온 게시물의 수(DB로부터 가져온)
+	
+	if(request.getParameter("nowPage")!=null) //한번 이상 페이지이동 클릭 했을 때
+	{
+		nowPage=Integer.parseInt(request.getParameter("nowPage"));
+	}
+	
+	totalRecode = (Integer)request.getAttribute("tcnt");		//전체 게시물 수
+	totalPage = (int)Math.ceil((double)totalRecode/numPerPage); //전체 페이지 수 반올림하기 위해 소수점 이하 값 살려주려고 double형
+	totalBlock = (int)Math.ceil((double)totalPage/pagePerBlock);//전체 페이지블럭 수 반올림하기 위해 소수점 이하 값 살려주려고 double형
+	nowBlock = (int)Math.ceil((double)nowPage/pagePerBlock);	//현재 페이지 블럭
+	
+%>
+
+
 <!-- Header -->
 <%@include file="/module/common/Header.jsp" %>
 
@@ -51,11 +80,16 @@
             <div style="text-align: center;"></div>
             <!-- 배너끝-->
         </div>
+        
+        
+        
         <div class="content">
             <div class="cont_tit">
                 <h3>자유게시판</h3>
             </div>
             <div class="scont">
+            
+            	<!-- 게시글 리스트 -->
                 <table class="btbl" style="width: 830px;">
                     <colgroup>
                         <col style="width: 12%;">
@@ -64,6 +98,8 @@
                         <col style="width: 16%;">
                         <col style="width: 12%;">
                     </colgroup>
+                    
+                    <!-- 열이름 -->
                     <thead>
                         <tr>
                             <th>번호</th>
@@ -73,6 +109,8 @@
                             <th class="bkn">조회수</th>
                         </tr>
                     </thead>
+                    
+                    <!-- 게시글 -->
                     <tbody>
                         <tr>
                             <td>1</td>
@@ -83,11 +121,13 @@
                         </tr>
                     </tbody>
                 </table>
+                
+                <!-- 페이징처리 -->
                 <div class="paging">
                     <img src="/img/fpage.gif" alt="처음페이지">
                     <img src="/img/back.gif" alt="이전페이지">
         
-                    <strong>1</strong>
+                    <a><strong>1</strong></a>
         
                     <img src="/img/next.gif" alt="다음페이지">
                     <img src="/img/lpage.gif" alt="마지막페이지">
@@ -105,6 +145,7 @@
                         </fieldset>
                     </div>
                 </form>
+                
                 <div class="cbtn">
                 	<a href="#" class="mbtn grey">글쓰기</a>
             	</div>                
