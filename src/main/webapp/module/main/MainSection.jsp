@@ -14,7 +14,7 @@
             <div class="mban">
                 <ul class="mban_list">
                     <li>
-                        <img src="img/ban.jpg">
+                        <img src="/img/ban.jpg">
                     </li>
                 </ul>
             </div>

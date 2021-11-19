@@ -8,8 +8,8 @@
 </head>
 <body>
 	<!--페이지 공통 css-->
-	<link rel="stylesheet" href="css/Common.css">
-	<link rel="stylesheet" href="css/Header.css">
-	<link rel="stylesheet" href="css/Footer.css">
+	<link rel="stylesheet" href="/css/Common.css">
+	<link rel="stylesheet" href="/css/Header.css">
+	<link rel="stylesheet" href="/css/Footer.css">
 </body>
 </html>

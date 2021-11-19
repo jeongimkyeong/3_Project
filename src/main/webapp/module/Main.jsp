@@ -8,23 +8,10 @@
 <link rel="stylesheet" href="/css/MainSection.css">
 <%@include file="/module/ComLink.jsp" %>
 </head>
-<%
-	String msg=null;
-	msg = (String)request.getAttribute("msg");
-	if(msg != null){
-		%>
-		<script>
-			alert("<%=msg%>");
-		</script>
-		
-		<%
-	}
-
-%>
 <body>
 	<div id="wrap">
 		<header id="header">
-			<%@include file="/module/common/Header.jsp" %>
+			<%@include file="/module/common/LoginHeader.jsp" %>
 		</header>
 		
 		<div class="mainPage">
