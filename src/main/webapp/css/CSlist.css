@@ -78,3 +78,5 @@ td.tl {
     vertical-align: middle;
     margin: 0 3px;
 }
+
+.cbtn input[type="submit"] {cursor: pointer;}
