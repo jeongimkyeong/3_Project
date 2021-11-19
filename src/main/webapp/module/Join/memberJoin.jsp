@@ -57,21 +57,13 @@
 				</td>
 			</tr>
 			<tr>
-				<th>일반전화</th>
-				<td>
-					<input type="text" name="userid" class="logininput" style="width:50px">-
-					<input type="text" name="userid" class="logininput" style="width:50px">-
-					<input type="text" name="userid" class="logininput" style="width:50px">
-				</td>
-			</tr>
-			<tr>
 				<th>이메일<span class="star">*</span></th>
 				<td><input type="text" name="userid" class="logininput" style="width:600px"></td>
 			</tr>
 			<tr>
 				<th rowspan="3">주소<span class="star">*</span></th>
 				<td>
-					<input type="text" name="userid" class="logininput" style="width:50px" readonly>
+					<input type="text" name="userid" class="logininput" style="width:70px" readonly>
 					<a href="#" class="formbutton">우편번호</a>
 				</td>
 			</tr>
@@ -81,14 +73,6 @@
 			<tr>
 				<td><input type="text" name="userid" class="logininput" style="width:600px"></td>
 			</tr>
-			<tr>
-				<th>수신여부</th>
-				<td>
-					<label><input type="checkbox" name="userid" value="">SMS 수신</label>
-					<label><input type="checkbox" name="userid" value="">이메일 수신</label>
-				</td>
-			</tr>
-			
 		</table>
 	</form>
 	

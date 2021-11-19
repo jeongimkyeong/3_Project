@@ -105,6 +105,9 @@
                         </fieldset>
                     </div>
                 </form>
+                <div class="cbtn">
+                	<a href="#" class="mbtn grey">문의하기</a>
+            	</div>                   
             </div>
         </div>
     </div>

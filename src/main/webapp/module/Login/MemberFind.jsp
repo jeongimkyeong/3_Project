@@ -14,24 +14,64 @@
 	<div class="stepjoin">
 		<h1>아이디 찾기</h1>
 	</div>
-	
-	<form name="agreeform" method="post" action="">
-		<div class="checkbox" style="height:300px;">
+		<div class="checkbox" style="height:200px; padding:40px 0 40px;" align="center" >
 			<p>회원가입시 사용하신 이름/휴대폰번호/이메일번호를 입력해주세요</p>
 			<div class="infobox">
-				<div class="scrollbox" style="margin:20px 10px;">
-
-				</div>
-				<div class="agreecheckbox">
-					<input type="checkbox" name="" >사이트이용약관에 동의합니다
-				</div>
+				<ul class="infoul">
+					<form>
+						<li class="inputli">
+						<p>
+							<label >이름</label>
+							<input type="text" class="logininput" style="width:350px;">
+						</p>
+						<p>
+							<label >휴대폰번호</label>
+							<input type="text" class="logininput" style="width:88px;">
+							<input type="text" class="logininput" style="width:88px;">
+							<input type="text" class="logininput" style="width:88px;">
+						</p>
+						<p>
+							<label >이메일주소</label>
+							<input type="text" class="logininput"style="width:350px;">
+						</p>
+						<li>
+							<a href="#" class="findidbutton"><span>아이디찾기<span></span></a>
+						</li>
+					</form>
+				</ul>
 			</div>
 		</div>
-	</form>
-	<div class="checkbutton">
-		<a href="/module/Join/memberJoin.jsp" class="chkbtna"><span>동의하기</span></a>
-		<a href="/MainPage.jsp">취소하기</a>
+		
+		<div class="stepjoin">
+		<h1>비밀번호 찾기</h1>
 	</div>
+		<div class="checkbox" style="height:200px; padding:40px 0 40px;" align="center" >
+			<p>회원가입시 사용하신 아이디/휴대폰번호/이메일번호를 입력해주세요</p>
+			<div class="infobox">
+				<ul class="infoul">
+					<form>
+						<li class="inputli">
+						<p>
+							<label >아이디</label>
+							<input type="text" class="logininput" style="width:350px;">
+						</p>
+						<p>
+							<label >휴대폰번호</label>
+							<input type="text" class="logininput" style="width:88px;">
+							<input type="text" class="logininput" style="width:88px;">
+							<input type="text" class="logininput" style="width:88px;">
+						</p>
+						<p>
+							<label >이메일주소</label>
+							<input type="text" class="logininput"style="width:350px;">
+						</p>
+						<li>
+							<a href="#" class="findidbutton"><span>비밀번호찾기<span></span></a>
+						</li>
+					</form>
+				</ul>
+			</div>
+		</div>
 </div>
 <%@ include file="/module/common/Footer.jsp" %>
 </body>

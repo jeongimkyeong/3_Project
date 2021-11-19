@@ -57,3 +57,24 @@ td.tl {
     text-align: left;
 }
 
+.cbtn {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.mbtn.grey {
+    background: #2e3133;
+    border: 1px solid #2e3133;
+    color: #fff!important;
+}
+
+.mbtn {
+    display: inline-block;
+    padding: 14px 34px;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    color: #232323;
+    vertical-align: middle;
+    margin: 0 3px;
+}

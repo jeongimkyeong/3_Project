@@ -7,9 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!--페이지 공통 css-->
-	<link rel="stylesheet" href="/css/Common.css">
-	<link rel="stylesheet" href="/css/Header.css">
-	<link rel="stylesheet" href="/css/Footer.css">
+	충돌 해결점 찾아보는 중22222
+	충돌 해결
+	충돌 해결
+	충돌 해결
+	해결 해결결
 </body>
 </html>

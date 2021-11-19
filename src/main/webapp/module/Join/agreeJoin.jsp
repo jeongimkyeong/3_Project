@@ -7,6 +7,15 @@
 <title>Join Page</title>
 <%@ include file="/module/LoginJoinLink.jsp" %>
 </head>
+<script>
+	function agreecheck(){
+		if(! document.agreeform.agreecheck.checked){
+			alert("이용약관을 읽어보시고 동의하셔야 됩니다");
+			return;
+		}
+		agreeform.submit();
+	}
+</script>
 <body>
 <%@ include file="/module/common/Header.jsp" %>
 <div class="sectioncontent">
@@ -19,7 +28,7 @@
 		</ul>
 	</div>
 	
-	<form name="agreeform" method="post" action="">
+	<form name="agreeform" method="post" action="/module/Join/memberJoin.jsp">
 		<div class="checkbox">
 			<h2 class="subtitle">사이트 이용약관</h3>
 			<div class="infobox">
@@ -31,13 +40,13 @@
 					이용약관이용약관이용약관이용약관이용약관이용약관이용약관이용약관
 				</div>
 				<div class="agreecheckbox">
-					<input type="checkbox" name="" >사이트이용약관에 동의합니다
+					<label><input type="checkbox" name="agreecheck" >사이트이용약관에 동의합니다</label>
 				</div>
 			</div>
 		</div>
 	</form>
 	<div class="checkbutton">
-		<a href="/module/Join/memberJoin.jsp" class="chkbtna"><span>동의하기</span></a>
+		<a class="chkbtna" onclick="javascript:agreecheck()"><span>동의하기</span></a>
 		<a href="/MainPage.jsp">취소하기</a>
 	</div>
 </div>
