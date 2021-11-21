@@ -11,6 +11,33 @@
     <%@include file="/module/ConLink.jsp" %>
 </head>
 <body>
+<% 
+	int totalRecode=0; 	//전체 게시물 수
+	int totalPage=0; 	//전체 페이지 수
+	int totalBlock=0;	//전체 블록 수
+	
+	int numPerPage=10; 	//한 페이지당 표시할 게시물 수
+	int pagePerBlock=10;//블록당 표시할 페이지 수
+		
+	int nowPage=1;		//현재 페이지
+	int nowBlock=1;		//현재 블록
+	
+	int start=1;		//DB로부터 가져올 게시물의 시작 번호
+	int end=10;			//Start로부터 10개의 게시물 출력하기 위한 값 지정
+	
+	int listSize=0;		//현재 읽어온 게시물의 수(DB로부터 가져온)
+	
+	//파라미터로 nowPage 넘어왔다면 nowPage에 해당 파라미터 값을 넣는다.
+	if(request.getParameter("nowPage") != null){
+		nowPage = Integer.parseInt(request.getParameter("nowPage"));	
+	}
+	
+	totalRecode = (Integer)request.getAttribute("tcnt");			//전체 게시물 수
+	totalPage = (int)Math.ceil((double)totalRecode/numPerPage);		//전체 페이지 수 (전체게시물/한 페이지당 표시할 게시물 수) 
+	totalBlock = (int)Math.ceil((double)totalPage/pagePerBlock);	//전체 블록 수 (전체페이지/블록당 표시할 페이지 수)
+	nowBlock = (int)Math.ceil((double)nowPage/pagePerBlock);		//현재 블록	(현재페이지/블록당 표시할 페이지 수)
+	
+%>
 
 <!-- Header -->
 <%@include file="/module/common/Header.jsp" %>
@@ -84,26 +111,55 @@
                     
                     <!-- 게시글 -->
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td class="tl"><a href="#">제목내용</a></td>
-                            <td>홍길동</td>
-                            <td>2021-00-00</td>
-                            <td>0</td>
-                        </tr>
+                    <%@page import="java.util.*,dto.*" %>
+                    <%
+                    	Vector<BoardDTO> list = (Vector<BoardDTO>)request.getAttribute("list");
+                    	for(int i=0;i<list.size();i++)
+                    	{
+                    	    %>
+                    	    <!-- list안에 저장된 값 꺼내옴 -->
+	                        <tr>
+	                            <td><%=list.get(i).getNum() %></td>
+	                            <td class="tl"><a href="#"><%=list.get(i).getSubject() %>></a></td>
+	                            <td><%=list.get(i).getUsername() %></td>
+	                            <td><%=list.get(i).getRegdate() %></td>
+	                            <td><%=list.get(i).getCount() %></td>
+	                        </tr>
+	                        <%
+                    	}
+                    %>    
                     </tbody>
+                    
                 </table>
                 
                 <!-- 페이징처리 -->
+                <!-- 함수 실행 시 form으로 데이터 전달 받고 nowPage가 위에 선언한 if문 실행 후 nowPage 업데이트되면서 nowBlock도 변경-->
+                <form name=listFrm method="get">
+                <input type="hidden" name="nowPage" value="1">
+                <input type="hidden" name="start" value="1">
+                <input type="hidden" name="end" value="10">                	
+                </form>
+                
+                <%
+                //몇 번째 블록인지 판단해서 몇 페이지까지 출력할지 지정((현재블럭 -1) * (블럭당 표시할 페이지 수))
+                //(1-1) * 10 + 1 = 1번블록 (pageStart 1로 지정)
+                int pageStart = (nowBlock-1)*pagePerBlock+1;
+                //마지막 블럭이 아니라면 pageStart에서 pagePerBlock 출력
+                int pageEnd = ((pageStart + pagePerBlock)<=totalPage)?(pageStart+pagePerBlock):totalPage+1;
+                %>
                 <div class="paging">
-                    <img src="/img/fpage.gif" alt="처음페이지">
-                    <img src="/img/back.gif" alt="이전페이지">
+                    <a href="javascript:block()"><img src="/img/fpage.gif" alt="처음페이지"></a>
+                    <a href="javascript:block()"><img src="/img/back.gif" alt="이전페이지"></a>
         
-                    <a><strong>1</strong></a>
+        			<!-- 클릭했을 때 해당 페이지로 이동될 수 있도록 -->
+                    <a href="javascript:paging()"><strong>1</strong></a>
         
-                    <img src="/img/next.gif" alt="다음페이지">
-                    <img src="/img/lpage.gif" alt="마지막페이지">
+                    <a href="javascript:block()"><img src="/img/next.gif" alt="다음페이지"></a>
+                    <a href="javascript:block()"><img src="/img/lpage.gif" alt="마지막페이지"></a>
                 </div>
+                
+                
+                <!-- 검색처리 -->
                 <form name="sform" method="post" action="#">
                     <div class="boardSch">
                         <fieldset>
