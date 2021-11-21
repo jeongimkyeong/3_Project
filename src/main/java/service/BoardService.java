@@ -1,5 +1,7 @@
 package service;
 
+import java.util.Vector;
+
 import dao.BoardDAO;
 import dto.BoardDTO;
 
@@ -23,7 +25,19 @@ public class BoardService {
 	
 	//게시물 추가
 	public void PostBoard(BoardDTO dto) {
-		dao.PostBoard(dto);
+		//dao에서 사용할 수 있는 함수 생성
+		dao.PostBoard(dto);		
+	}
+	
+	//게시물 리스트(start-end까지의 게시물 가져오기)
+	public Vector<BoardDTO> GetBoardList(int start, int end) {
+		//dao에서 사용할 수 있는 함수 생성
+		return dao.GetBoardList(start,end);
+	}
+	
+	//전체 게시물 수 가져오기
+	public int GetTotalCount() {
+		return dao.GetTotalCount();
 	}
 	
 	

@@ -34,7 +34,6 @@
                 <img src="/img/footer_logo.png">
             </div>
         </div>
-        
     </div>
 </body>
 </html>

@@ -12,7 +12,7 @@ public class BoardPostController implements Controller{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		
-		//파라미터 받기
+		//파라미터 받기(Post.jsp의 form에 입력값 받기)
 		String subject = request.getParameter("subject");
 		String username = request.getParameter("username");
 		String content = request.getParameter("content");
