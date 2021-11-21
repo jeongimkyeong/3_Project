@@ -24,7 +24,7 @@
 		<em>(<span class="star">*</span>표시된 항목은 꼭 입력해 주셔야 가입이 가능합니다.)</em>
 	</h3>
 	
-	<form name="inputform" method="post" action="">
+	<form name="inputform" method="post" action="/member/join.do">
 		<table class="formtable" style="width:900px;">
 			<tr>
 				<th>아이디<span class="star">*</span></th>
@@ -36,42 +36,38 @@
 			<tr>
 				<th>비밀번호<span class="star">*</span></th>
 				<td>
-					<input type="text" name="userid" class="logininput">
+					<input type="password" name="pwd" class="logininput">
 					<span class="star" style="font-size:13px;">*4자이상의 영문 및 숫자</span>
 				</td>
 			</tr>
 			<tr>
 				<th>비밀번호확인<span class="star">*</span></th>
-				<td><input type="text" name="userid" class="logininput"></td>
+				<td><input type="password" name="pwdchk" class="logininput"></td>
 			</tr>
 			<tr>
 				<th>이름<span class="star">*</span></th>
-				<td><input type="text" name="userid" class="logininput"></td>
+				<td><input type="text" name="username" class="logininput"></td>
 			</tr>
 			<tr>
 				<th>휴대전화번호<span class="star">*</span></th>
 				<td>
-					<input type="text" name="userid" class="logininput" style="width:50px">-
-					<input type="text" name="userid" class="logininput" style="width:50px">-
-					<input type="text" name="userid" class="logininput" style="width:50px">
+					<input type="text" name="phone1" class="logininput" style="width:50px">-
+					<input type="text" name="phone2" class="logininput" style="width:50px">-
+					<input type="text" name="phone3" class="logininput" style="width:50px">
 				</td>
-			</tr>
-			<tr>
-				<th>이메일<span class="star">*</span></th>
-				<td><input type="text" name="userid" class="logininput" style="width:600px"></td>
 			</tr>
 			<tr>
 				<th rowspan="3">주소<span class="star">*</span></th>
 				<td>
-					<input type="text" name="userid" class="logininput" style="width:70px" readonly>
+					<input type="text" name="zipcode" class="logininput" style="width:70px" readonly>
 					<a href="#" class="formbutton">우편번호</a>
 				</td>
 			</tr>
 			<tr>
-				<td><input type="text" name="userid" class="logininput" style="width:600px"></td>
+				<td><input type="text" name="addr1" class="logininput" style="width:600px"></td>
 			</tr>
 			<tr>
-				<td><input type="text" name="userid" class="logininput" style="width:600px"></td>
+				<td><input type="text" name="addr2" class="logininput" style="width:600px"></td>
 			</tr>
 		</table>
 	</form>

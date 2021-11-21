@@ -8,13 +8,13 @@ create table member_tbl(
     pwd varchar(45) not null,
     username varchar(45) not null,
     phone varchar(20) not null,
-    email varchar(45) not null,
     zipcode int not null,
     addr1 varchar(45) not null,
     addr2 varchar(45) not null,
     grade int
 );
 
+/*member_tbl 테이블에 email 부분 삭제*/
 desc member_tbl;
 
 create table board_tbl(

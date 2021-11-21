@@ -7,6 +7,7 @@ import controller.auth.AuthLoginController;
 import controller.auth.AuthLogoutController;
 import controller.board.BoardListController;
 import controller.board.BoardPostController;
+import controller.member.memberJoinController;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -30,6 +31,9 @@ public class FrontController extends HttpServlet{
 		//게시판
 		list.put("/board/list.do",new BoardListController());
 		list.put("/board/post.do",new BoardPostController());
+		
+		//가입
+		list.put("/member/join.do",new memberJoinController());
 	}
 	
 
