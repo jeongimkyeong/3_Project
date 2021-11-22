@@ -8,6 +8,8 @@ import controller.auth.AuthLogoutController;
 import controller.board.BoardListController;
 import controller.board.BoardPostController;
 import controller.member.memberJoinController;
+import controller.member.memberJoinIdCheck;
+import controller.member.memberJoinIdCheck;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -34,6 +36,7 @@ public class FrontController extends HttpServlet{
 		
 		//가입
 		list.put("/member/join.do",new memberJoinController());
+		list.put("/member/joinidcheck.do",new memberJoinIdCheck());
 	}
 	
 
