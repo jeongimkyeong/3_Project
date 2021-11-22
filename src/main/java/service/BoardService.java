@@ -40,6 +40,10 @@ public class BoardService {
 		return dao.GetTotalCount();
 	}
 	
+	//특정 게시물 가져오기
+	public BoardDTO GetBoardDTO(int num) {
+		return dao.GetBoardDTO(num);
+	}
 	
 	
 	
