@@ -120,6 +120,7 @@ public class BoardDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		int totalcnt=0;
+		
 		try {
 			conn = ds.getConnection();
 			String sql = "select count(*) from board_tbl";
