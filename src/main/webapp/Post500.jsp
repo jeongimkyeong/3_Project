@@ -36,7 +36,7 @@
 		pstmt.setString(2, "aaa"+i);
 		pstmt.setString(3, "Subject"+i);
 		pstmt.setString(4, "Content"+i);
-		pstmt.setString(5, null);
+		pstmt.setString(5, "2021-00-00");
 		pstmt.setString(6, "1234");
 		pstmt.setInt(7, 0);
 		pstmt.setString(8, "파일없음");

@@ -28,9 +28,9 @@
 	int listSize=0;		//현재 읽어온 게시물의 수(DB로부터 가져온)
 	
 	//파라미터로 nowPage 넘어왔다면 nowPage에 해당 파라미터 값을 넣는다.
-	if(request.getParameter("nowPage") != null){
-		nowPage = Integer.parseInt(request.getParameter("nowPage"));	
-	}
+//	if(request.getParameter("nowPage") != null){
+//		nowPage = Integer.parseInt(request.getParameter("nowPage"));	
+//	}
 	
 	totalRecode = (Integer)request.getAttribute("tcnt");			//전체 게시물 수
 	totalPage = (int)Math.ceil((double)totalRecode/numPerPage);		//전체 페이지 수 (전체게시물/한 페이지당 표시할 게시물 수) 
@@ -122,7 +122,7 @@
 	                            <td><%=list.get(i).getNum() %></td>
 	                            <td class="tl"><a href="#"><%=list.get(i).getSubject() %>></a></td>
 	                            <td><%=list.get(i).getUsername() %></td>
-	                            <td><%=list.get(i).getRegdate() %></td>
+	                            <td><%=list.get(i).getRegdate().substring(0,10) %></td>
 	                            <td><%=list.get(i).getCount() %></td>
 	                        </tr>
 	                        <%
@@ -148,13 +148,19 @@
                 int pageEnd = ((pageStart + pagePerBlock)<=totalPage)?(pageStart+pagePerBlock):totalPage+1;
                 %>
                 <div class="paging">
-                    <a href="javascript:block()"><img src="/img/fpage.gif" alt="처음페이지"></a>
-                    <a href="javascript:block()"><img src="/img/back.gif" alt="이전페이지"></a>
+                    <a href="/SubPage/Community/FreeBoard/List.jsp"><img src="/img/fpage.gif" alt="처음페이지"></a>
+                    <a href="javascript:block('<%=nowBlock-1%>')"><img src="/img/back.gif" alt="이전페이지"></a>
         
-        			<!-- 클릭했을 때 해당 페이지로 이동될 수 있도록 -->
-                    <a href="javascript:paging()"><strong>1</strong></a>
-        
-                    <a href="javascript:block()"><img src="/img/next.gif" alt="다음페이지"></a>
+        			<!-- 클릭했을 때 해당 블록으로 이동될 수 있도록 -->
+        			<%
+        				for(int i=pageStart;i<pageEnd;i++)
+        				{
+        			%> 
+                    <a href="javascript:paging('<%=i%>')"><strong><%=i %>></strong></a>
+        			<%
+        				}
+        			%>
+                    <a href="javascript:block('<%=nowBlock+1%>')"><img src="/img/next.gif" alt="다음페이지"></a>
                     <a href="javascript:block()"><img src="/img/lpage.gif" alt="마지막페이지"></a>
                 </div>
                 
