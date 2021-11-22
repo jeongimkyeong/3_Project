@@ -31,10 +31,11 @@ public class MemberDAO {
 			Context initContext = new InitialContext();
 			Context envContext = (Context)initContext.lookup("java:comp/env");
 			ds = (DataSource)envContext.lookup("jdbc/MysqlDB");
+			System.out.println("DBCP TRY부분 진입");
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}
-	}
+	}//생성자 메소드 MemberDAO를 실행하게되면 자동실행되는부분
 	
 	
 	//멤버 조회
@@ -59,7 +60,6 @@ public class MemberDAO {
 				dto.setPwd(rs.getString("pwd"));
 				dto.setUsername(rs.getString("username"));
 				dto.setPhone(rs.getString("phone"));
-				dto.setEmail(rs.getString("email"));
 				dto.setZipcode(rs.getInt("zipcode"));
 				dto.setAddr1(rs.getString("addr1"));
 				dto.setAddr2(rs.getString("addr2"));
@@ -75,12 +75,96 @@ public class MemberDAO {
 			try {rs.close();}catch(Exception e) {}
 		}
 		return dto;
-	}
+	}//memberSearch 메소드 부분
+	
+	public String memberIdSearch(String id) {
+		System.out.println("memberIdSearch진입");
+		System.out.println("ajax에서 받아온 id 값 : " + id);
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String userid = null;
+		
+		try {
+			conn = ds.getConnection();
+			String sql="select userid from member_tbl where userid=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs != null) {//받아온 id 값이 db에 있따면
+				System.out.println("rs = null이 아닌 if문호출");
+				while(rs.next()) {
+					userid = rs.getString("userid");
+				}
+			}else {
+				return "검색된아이디없음";
+			}
+		
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}finally {
+				try {conn.close();}catch(Exception e) {}
+				try {pstmt.close();}catch(Exception e) {}
+			}
+		return userid;
+			
+	}//memberIdSearch class 부분
+	
+	public boolean memberJoin(MemberDTO dto) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int result=0;
+		
+		try {
+			conn = ds.getConnection();
+			String sql="insert into member_tbl values(?,?,?,?,?,?,?,?)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, dto.getUserid());
+			pstmt.setString(2, dto.getPwd());
+			pstmt.setString(3, dto.getUsername());
+			pstmt.setString(4, dto.getPhone());
+			pstmt.setInt(5, dto.getZipcode());
+			pstmt.setString(6, dto.getAddr1());
+			pstmt.setString(7, dto.getAddr2());
+			pstmt.setInt(8, dto.getGrade());
+			result = pstmt.executeUpdate();
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {conn.close();}catch(Exception e) {}
+			try {pstmt.close();}catch(Exception e) {}
+		}
+		if(result != 0) {
+			return true;
+		}else {
+			return false;
+		}
+	}//memberJoin 메소드 부분
 	
 	
 	
 	
 	
 	
+//	Connection conn = null;
+//	PreparedStatement pstmt = null;
+//	ResultSet rs = null;
+//	
+//	try {
+//		conn = ds.getConnection();
+//		String sql="";
+//		pstmt = conn.prepareStatement(sql);
+//		
+//		
+//	} catch (SQLException e) {
+//		e.printStackTrace();
+//	}finally {
+//		try {conn.close();}catch(Exception e) {}
+//		try {pstmt.close();}catch(Exception e) {}
+//		try {rs.close();}catch(Exception e) {}
+//	}
 	
 }//MemberDAO class 부분

@@ -6,7 +6,6 @@ public class MemberDTO {
 	private String pwd;
 	private String username;
 	private String phone;
-	private String email;
 	private int zipcode;
 	private String addr1;
 	private String addr2;
@@ -46,14 +45,6 @@ public class MemberDTO {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public int getZipcode() {

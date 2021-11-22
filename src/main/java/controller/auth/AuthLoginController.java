@@ -55,7 +55,6 @@ public class AuthLoginController  implements Controller{
 		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getPwd());
 		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getUsername());
 		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getPhone());
-		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getEmail());
 		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getZipcode());
 		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getAddr1());
 		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getAddr2());
