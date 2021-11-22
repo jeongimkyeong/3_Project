@@ -151,6 +151,12 @@ form{
 .chkbtna span{
 	color:#fff;
 }
+.chkbtninput{
+	background-color:#2e3133;
+	color:#fff;
+	padding: 13px 33px;
+	font-size:20px;
+}
 .steptitle{
 	font-size:22px;
 	padding: 14px 0 20px 12px;

@@ -7,6 +7,7 @@
 <title>Join Page</title>
 <%@ include file="/module/LoginJoinLink.jsp" %>
 </head>
+
 <body>
 <%@ include file="/module/common/Header.jsp" %>
 <div class="sectioncontent">
@@ -74,11 +75,11 @@
 	
 	
 	<div class="checkbutton">
-		<a href="" class="chkbtna"><span>가입하기</span></a>
+		<input type="submit" value="가입하기" class="chkbtninput">
 		<a href="/MainPage.jsp">취소하기</a>
 	</div>
 </div>
 <%@ include file="/module/common/Footer.jsp" %>
-<!-- merge 테스트 문구 -->
+
 </body>
 </html>
