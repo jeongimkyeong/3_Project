@@ -80,42 +80,11 @@
         .nlnb dd a:first-child {
             border-top: 0;
         }
- 
-    
-        .content {
-            width: 800px;
-            float: left;
-            padding: 0 0 80px;
-            display: table-cell;
-            vertical-align: top;
-        }
-        
-        .cont_tit {
-            padding: 20px 0;
-            line-height: 1.4;
-            color: #999;
-        }
-        .cont_tit h3 {
-            font-size: 28px;
-            color: #111;
-            font-weight: 500;
-            letter-spacing: -1px;
-        }
-        h3 {
-            display: block;
-            font-size: 1.17em;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-weight: bold;
-        }
-        A:link {
+         A:link {
             text-decoration: none;
             color: #444;
-        }
-        
-        div {
+        } 
+         div {
             display: block;
         }
         ul, ol, li, dl {
@@ -128,11 +97,11 @@
             margin-inline-start: 0px;
             margin-inline-end: 0px;
         }
-        dd {
+         dd {
             display: block;
             margin-inline-start: 40px;
             font-size: 13px;
-        }
+            }
         .lnbcs {
             border: 1px solid #ddd;
              padding: 20px;
@@ -152,6 +121,176 @@
             padding: 8px 0 16px;
             letter-spacing: -1px;
                 }       
+        .csline {
+            height: 1px;
+            width: 60px;
+            display: block;
+            background: #aaa;
+            margin: 0 auto 14px;
+                } 
+          element.style {
+            cursor: pointer;
+        }
+        
+ 
+    
+        .content {
+            width: 800px;
+            float: left;
+            padding: 0 0 80px;
+            display: table-cell;
+            vertical-align: top;
+        }
+        
+        .cont_tit {
+            padding: 20px 0;
+            line-height: 1.4;
+            color: #999;
+            line-height: 1.4;
+        }
+        .cont_tit h3 {
+            font-size: 28px;
+            color: #111;
+            font-weight: 500;
+            letter-spacing: -1px;
+        }
+         .btbl {
+            margin: 0 0 40 px;
+            text-align: center;
+            border-top: 1px solid #282e38;
+            font-size: 14px;
+        }
+        h3 {
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+        h4 {
+            display: block;
+            margin-block-start: 1.33em;
+            margin-block-end: 1.33em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            
+        }
+       
+        
+         table {
+            border-collapse: collapse;
+            display: table;
+            box-sizing: border-box;
+            text-indent: initial;
+            border-spacing: 2px;
+            border-color: grey
+        }
+         colgroup {
+            display: table-column-group;
+        }
+        thead {
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+        tr {
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+        }
+        th {
+            display: table-cell;
+            vertical-align: inherit;
+            text-align: -internal-center;
+        }
+        td {
+            display: table-cell;
+            vertical-align: inherit;
+        }
+        .btbl thead th:first-child, .btbl td:first-child {
+            border-left: 0;
+        }
+        .btbl thead th {
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            background: #f7f7f7;
+            padding: 15px;
+            color: #111;
+            font-weight: 400;
+        }
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+         .btbl td {
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            padding: 10px;
+            line-height: 22px;
+        }
+        .imgbox {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            padding: 1px;
+        }
+        img, fieldset {
+            vertical-align: middle;
+        }
+        .cont {
+            text-align: left;
+        }
+        .cont h4 {
+            font-weight: 500;
+            font-size: 16px;
+            color: #111;
+        }
+      
+        a:-webkit-any-link {
+            cursor: pointer;
+            
+        }
+        .cont p {
+            margin: 6px 0 0;
+        }
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        .frprice {
+            color: #f84e51;
+            font-size: 18px;
+        }
+        strong {
+            font-weight: bold;
+        }
+
+        .sbtn {
+            display: block;
+            height: 26px;
+            line-height: 26px;
+            width: 92px;
+            vertical-align: middle;
+            font-size: 14px;
+            margin: 2px auto;
+            background: #fff;
+            border: 1px solid #3f3f3f;
+        }
+        .fmenu ul {
+		    width: 1080px;
+		    margin: 0 auto;
+		    height: 58px;
+		    line-height: 58px;
+		    overflow: hidden;
+		}
+       
+           
         .csline {
             height: 1px;
             width: 60px;
@@ -181,30 +320,12 @@
             text-indent: -9999px;
             vertical-align: middle;
         }
-        table {
-            border-collapse: collapse;
-            display: table;
-            box-sizing: border-box;
-            text-indent: initial;
-            border-spacing: 2px;
-            border-color: grey;
-        }
-        colgroup {
-            display: table-column-group;
-        }
+       
         col {
             display: table-column;
         }
-        tbody {
-            display: table-row-group;
-            vertical-align: middle;
-            border-color: inherit;
-        }
-        tr {
-            display: table-row;
-            vertical-align: inherit;
-            border-color: inherit;
-        }
+       
+       
         .stbl th {
             height: 24px;
             text-align: left;
@@ -215,20 +336,14 @@
             font-size: 15px;
             font-weight: 400;
         }
-        th {
-            display: table-cell;
-            vertical-align: inherit;
-        }
+       
         .stbl td {
             height: 24px;
             padding: 9px 10px;
             border-bottom: 1px solid #e7e7e7;
             text-align: center;
         }
-        td {
-            display: table-cell;
-            vertical-align: inherit;
-        }
+       
         .fr {
             color: #cc3333 !important;
         }
