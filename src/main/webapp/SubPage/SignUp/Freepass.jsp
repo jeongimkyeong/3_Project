@@ -12,6 +12,7 @@
 <body>
 <!-- Header -->
 <%@include file="/module/common/Header.jsp" %>
+<%@ include file="/module/ConLink.jsp" %>
 
 	<div class="smain">  
 	
@@ -19,50 +20,19 @@
                 <h2><span>PRODUCT</span>수강신청</h2>
                 <div class="nlnb">
         
-                    <dl>
-                        <dt><a href="#">프리패스 신청</a></dt>
+                   <dl>
+                        <dt><a href="/SubPage/SignUp/Freepass.jsp">프리패스 신청</a></dt>
                     </dl>
         
                     <dl>
-                        <dt><a href="#">9급공무원</a></dt>
+                        <dt><a href="/SubPage/SignUp/Content9.jsp">9급공무원</a></dt>
                     </dl>
         
                     <dl>
-                        <dt><a href="#">7급공무원</a></dt>
+                        <dt><a href="/SubPage/SignUp/Police.jsp">경찰공무원</a></dt>
                     </dl>
         
-                    <dl>
-                        <dt><a href="#">경찰공무원</a></dt>
-                    </dl>
-        
-                    <dl>
-                        <dt><a href="#">기술직공무원</a></dt>
-                    </dl>
-        
-                    <dl>
-                        <dt><a href="#">행정직 군무원</a></dt>
-        
-                        <dd><a href="#">기본이론반</a><a href="#">심화특강반</a><a href="#">기출분석반</a></dd>
-        
-                    </dl>
-        
-                    <dl>
-                        <dt><a href="#">군수직 군무원</a></dt>
-        
-                        <dd><a href="#">기본이론반</a><a href="#">기출분석반</a><a href="#">심화특강반</a></dd>
-        
-                    </dl>
-        
-                    <dl>
-                        <dt><a href="#">초단기합격반</a></dt>
-        
-                        <dd><a href="#">기초이론반</a><a href="#">기본이론반</a><a href="#">심화이론반</a></dd>
-        
-                    </dl>
-        
-                    <dl>
-                        <dt><a href="#">수강후기</a></dt>
-                    </dl>
+                   
                 </div>
         
                         <div class="lnbcs">
