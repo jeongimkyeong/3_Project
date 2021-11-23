@@ -24,9 +24,7 @@ create table board_tbl(
 	content text not null,
 	regdate DATETIME DEFAULT CURRENT_TIMESTAMP,
 	pwd varchar(15),
-	count int unsigned,
-	filename varchar(30),
-	filesize int
+	count int unsigned
 );
 
 /*전체 실행 : Ctrl+Alt+X , 드래그한부분 실행 : Alt+X*/

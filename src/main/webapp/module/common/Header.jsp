@@ -31,7 +31,7 @@
                 <a href="/SubPage/SignUp/Contents9.jsp">수강신청</a>
                 <a href="#">강사소개</a>
                 <a href="/SubPage/Book/Mainbooklist.jsp">교재소개</a>
-                <a href="/SubPage/Community/FreeBoard/List.jsp">커뮤니티</a>
+                <a href="/board/list.do">커뮤니티</a>
                 <a href="/SubPage/CScenter/Notice/List.jsp">고객센터</a>
             </div>
             

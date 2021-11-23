@@ -73,7 +73,7 @@
 	
 	function read(num) {
 		var page=<%=nowPage%>;
-		var numPerPage=<%=numPerPage%>
+		var numPerPage=<%=numPerPage%>;
 		
 		document.readFrm.num.value=num;
 		document.readFrm.nowPage.value=page;
@@ -81,7 +81,7 @@
 		document.readFrm.start.value=(page*numPerPage)-numPerPage;
 		document.readFrm.end.value=numPerPage;
 		
-		document.readFrm.action="board/read.do";
+		document.readFrm.action="/board/read.do";
 		document.readFrm.submit();
 	}
 	
@@ -115,7 +115,7 @@
             <div class="leftb"> <!-- nlnb-->
                 <dl>
                     <dt>
-                        <a href="/SubPage/Community/FreeBoard/List.jsp">자유게시판</a>
+                        <a href="/board/list.do">자유게시판</a>
                     </dt>
                 </dl>
                 <dl>
@@ -149,6 +149,7 @@
             <div class="cont_tit">
                 <h3>자유게시판</h3>
             </div>
+           
             <div class="scont">
             
             	<!-- 게시글 리스트 -->
@@ -185,7 +186,7 @@
 	                            <td><%=list.get(i).getNum() %></td>
 	                            <td class="tl"><a href="javascript:read('<%=list.get(i).getNum()%>')"><%=list.get(i).getSubject() %>></a></td>
 	                            <td><%=list.get(i).getUsername() %></td>
-	                            <td><%=list.get(i).getRegdate().substring(0,10) %></td>
+	                            <td><%=list.get(i).getRegdate() %></td>
 	                            <td><%=list.get(i).getCount() %></td>
 	                        </tr>
 	                        <%
@@ -229,7 +230,9 @@
                     <a href="javascript:block('<%=nowBlock+1%>')"><img src="/img/next.gif" alt="다음페이지"></a>
                     <a href="javascript:block('<%=totalBlock%>')"><img src="/img/lpage.gif" alt="마지막페이지"></a>
                 </div>
-                
+                <div class="cbtn">
+                	<a href="/SubPage/Community/FreeBoard/Post.jsp" class="mbtn grey">글쓰기</a>
+            	</div>  
                 
                 <!-- 검색처리 -->
                 <form name="sform" method="post" action="#">
@@ -246,9 +249,7 @@
                     </div>
                 </form>
                 
-                <div class="cbtn">
-                	<a href="/SubPage/Community/FreeBoard/Post.jsp" class="mbtn grey">글쓰기</a>
-            	</div>                
+               
             </div>
         </div>
     </div>

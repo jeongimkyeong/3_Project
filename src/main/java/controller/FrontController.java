@@ -5,8 +5,11 @@ import java.util.HashMap;
 
 import controller.auth.AuthLoginController;
 import controller.auth.AuthLogoutController;
+import controller.board.BoardDeleteController;
 import controller.board.BoardListController;
 import controller.board.BoardPostController;
+import controller.board.BoardReadController;
+import controller.board.BoardUpdateController;
 import controller.member.memberJoinController;
 import controller.member.memberJoinIdCheck;
 import controller.member.memberJoinIdCheck;
@@ -33,6 +36,10 @@ public class FrontController extends HttpServlet{
 		//게시판
 		list.put("/board/list.do",new BoardListController());
 		list.put("/board/post.do",new BoardPostController());
+		list.put("/board/read.do",new BoardReadController());
+		list.put("/board/update.do",new BoardUpdateController());
+		list.put("/board/delete.do",new BoardDeleteController());
+		
 		
 		//가입
 		list.put("/member/join.do",new memberJoinController());
