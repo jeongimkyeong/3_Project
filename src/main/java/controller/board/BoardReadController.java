@@ -1,6 +1,7 @@
 package controller.board;
 
 import controller.Controller;
+import controller.HttpUtil;
 import dto.BoardDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -25,7 +26,8 @@ public class BoardReadController implements Controller{
 		BoardDTO dto = service.GetBoardDTO(num);
 		
 		//페이지이동
-		
+		request.setAttribute("dto", dto);
+		HttpUtil.forward(request, response, "/SubPage/Community/FreeBoard/Read.jsp");
 	}
 
 }

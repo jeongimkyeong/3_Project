@@ -25,7 +25,7 @@
             <div class="leftb"> <!-- nlnb-->
                 <dl>
                     <dt>
-                        <a href="/SubPage/Community/FreeBoard/List.jsp">자유게시판</a>
+                        <a href="/board/list.do">자유게시판</a>
                     </dt>
                 </dl>
                 <dl>
@@ -93,17 +93,14 @@
                             <td>
                             <input name="pwd" type="text" style="width:100px;height:34px;border:1px solid #ddd;">
                             </td>
-                        </tr>
-		                <tr class="cbtn">
-		                	<td colspan="2">
-		                	<input type="submit" value="작성완료" class="mbtn grey">
-		                	<a href="/SubPage/Community/FreeBoard/List.jsp" class="mbtn ">목록으로</a>
-		                	</td>
-		            	</tr>                         
+                        </tr>                     
                     </tbody>               
-                </table>             
-			</form>
-           
+                </table>
+                	<div class="cbtn">
+		                <input type="submit" value="작성완료" class="mbtn grey">
+		                <a href="/board/list.do" class="mbtn ">목록으로</a>
+		           	</div>            
+				</form>
             </div>
         </div>
     </div>

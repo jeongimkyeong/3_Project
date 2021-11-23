@@ -24,7 +24,7 @@
             <div class="leftb"> <!-- nlnb-->
                 <dl>
                     <dt>
-                        <a href="/SubPage/Community/FreeBoard/List.jsp">자유게시판</a>
+                        <a href="/board/list.do">자유게시판</a>
                     </dt>
                 </dl>
                 <dl>

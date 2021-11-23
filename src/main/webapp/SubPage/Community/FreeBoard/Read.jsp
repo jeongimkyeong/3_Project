@@ -8,12 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/css/CSlist.css" rel="stylesheet" type="text/css">
+    <link href="/css/CSread.css" rel="stylesheet" type="text/css">
     <%@include file="/module/ConLink.jsp" %>
 </head>
 <body>
 
 <!-- DTO 가져오기 -->
-<%@page import=dto.* %>
+<%@page import="dto.*" %>
 <%
 	BoardDTO dto = (BoardDTO)request.getAttribute("dto");
 	System.out.println("현재페이지 : " + request.getParameter("nowPage"));
@@ -52,7 +53,7 @@
             <div class="leftb"> <!-- nlnb-->
                 <dl>
                     <dt>
-                        <a href="/SubPage/Community/FreeBoard/List.jsp">자유게시판</a>
+                        <a href="/board/list.do">자유게시판</a>
                     </dt>
                 </dl>
                 <dl>
@@ -115,18 +116,19 @@
                     </tbody>               
                 </table>
 		        	<div class="cbtn">
-		            	<a href="javascript:list()" class="mbtn ">목록으로</a>
+		            	<a href="/board/list.do" class="mbtn ">목록으로</a>
 		           	</div>
 				<form>
-				<dl class="reple">
-								<dt>댓글</dt>
-								<dd>
-									<textarea name="neyong" id="neyong" cols="45" rows="5" class="txtarea" style="width:95%" onkeyup="CheckByte(250,rpfm,'textlimit');"></textarea>
-								</dd>
-								<dd><div class="stip">기타의견은 250자 내외로 입력하실 수 있습니다. <strong class="fb" id="textlimit">0</strong>/250Byte</div>
-									<a href="#" class="ssbtn blue">댓글달기</a>
-								</dd>
-						</dl>				
+					<dl class="reple">
+						<dt>댓글</dt>
+							<dd>
+								<textarea name="neyong" id="neyong" cols="45" rows="5" class="txtarea" style="width:95%" onkeyup="CheckByte(250,rpfm,'textlimit');"></textarea>
+							</dd>
+							<dd>
+								<div class="stip">기타의견은 250자 내외로 입력하실 수 있습니다. <strong class="fb" id="textlimit">0</strong>/250Byte</div>
+								<a href="#" class="ssbtn blue">댓글달기</a>
+							</dd>
+					</dl>				
 				</form>
            
             </div>

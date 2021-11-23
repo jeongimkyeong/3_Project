@@ -29,7 +29,7 @@
 		
 		for(int i=1; i<=500; i++)
 		{
-		String sql = "insert into board_tbl values(?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into board_tbl values(?,?,?,?,?,?,?)";
 		pstmt = conn.prepareStatement(sql);
 		//셋팅걸기 auto_increment는 null값 넣으면 자동
 		pstmt.setString(1, null); 
@@ -39,8 +39,6 @@
 		pstmt.setString(5, "2021-00-00");
 		pstmt.setString(6, "1234");
 		pstmt.setInt(7, 0);
-		pstmt.setString(8, "파일없음");
-		pstmt.setInt(9, 0);
 		pstmt.executeUpdate(); // 조회 : executeQuery()
 		}
 		

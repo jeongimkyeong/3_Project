@@ -70,3 +70,43 @@ td.cmt {
     vertical-align: middle;
     margin: 0 3px;
 }
+
+.reple {
+    padding: 30px 0;
+    border-bottom: 1px solid #e4e4e4;
+    width: 830px;
+}
+
+.reple dt {
+    font-size: 18px;
+    color: #111;
+    padding: 0 0 10px 4px;
+}
+
+.reple dd {
+    padding: 0 0 10px;
+    overflow: hidden;
+}
+
+.stip {
+    color: #ff6633;
+    font-size: 13px;
+}
+
+.reple .stip {
+    float: left;
+}
+
+.ssbtn.blue {
+    background: #588ef2;
+    border: 1px solid #4782ef;
+    color: #fff !important;
+}
+
+.reple .ssbtn {
+	height:20px;
+	line-height:20px;
+	border-radius: 3px;
+	margin-right:35px;
+    float: right;
+}

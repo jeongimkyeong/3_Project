@@ -36,6 +36,7 @@ public class BoardDAO {
 		}
 	}
 	
+	
 	//게시물 추가작업
 	public void PostBoard(dto.BoardDTO dto) {
 		//커넥션생성
@@ -48,14 +49,16 @@ public class BoardDAO {
 			conn = ds.getConnection();
 			
 			//Post작성한 데이터 DB에 삽입 쿼리문(조건이 수시로 변할 때 변수처리를 '?'문자로 처리 : 바인딩 변수)
-			String sql = "insert into board_tbl(subject, username, content, pwd) values(?,?,?,?)";
+			//num : auto_increment로 null값 지정, regdate: now() 현재 날짜와 시간 지정, count: 0으로 지정
+			String sql = "insert into board_tbl(num,username,subject,content,regdate,pwd,count) values(null,?,?,?,now(),?,0)";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, dto.getSubject());
-			pstmt.setString(2, dto.getUsername());
+			pstmt.setString(1, dto.getUsername());
+			pstmt.setString(2, dto.getSubject());
 			pstmt.setString(3, dto.getContent());
 			pstmt.setString(4, dto.getPwd());
-			
+
 			pstmt.executeUpdate();
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -64,7 +67,6 @@ public class BoardDAO {
 			try {conn.close();}catch(Exception e) {}
 		}
 	}
-	
 	
 	
 	
@@ -142,8 +144,32 @@ public class BoardDAO {
 	}
 	
 
+	//조회수 증가
+	public void Upcount(int num) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			conn=ds.getConnection();
+			String sql = "update board_tbl set count=count+1 where num=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			try {rs.close();} catch (Exception e2) {}
+			try {pstmt.close();} catch (Exception e2) {}
+			try {conn.close();} catch (Exception e2) {}
+		}
+	}
+	
 	//해당 게시물 가져오기
 	public BoardDTO GetBoardDTO(int num) {
+		//조회수 증가하고 나서 처리
+		Upcount(num);
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
