@@ -7,15 +7,7 @@
 <title>Join Page</title>
 <%@ include file="/module/LoginJoinLink.jsp" %>
 </head>
-<script>
-	function agreecheck(){
-		if(! document.agreeform.agreecheck.checked){
-			alert("이용약관을 읽어보시고 동의하셔야 됩니다");
-			return;
-		}
-		agreeform.submit();
-	}
-</script>
+
 <body>
 <%@ include file="/module/common/Header.jsp" %>
 <div class="sectioncontent">

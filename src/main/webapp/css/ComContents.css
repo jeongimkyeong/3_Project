@@ -42,26 +42,20 @@
     line-height: 16px;
 }
 /*booklist leftb 추가내용 css 숨겼다보이기*/
-.leftb dd{
+.leftbdl dd{
 	padding:12px 15px;
 	display:none;
 }
-.firstdl:hover dd{
+.leftbdl:hover dd{
 	display:block;
 }
-.secondtdl:hover dd{
-	display:block;
-}
-.thirddl:hover dd{
-	display:block;
-}
-.leftb dd a{
+.leftbdl dd a{
 	display:block;
 	padding:6px 0px 6px 8px;
 	border-bottom:1px solid #e2e2e2;
 	color:#666;
 }
-.leftb dd a:last-child{
+.leftbdl dd a:last-child{
 	border-bottom:0;
 }
 /*추가내용끝*/

@@ -50,16 +50,6 @@ public class AuthLoginController  implements Controller{
 		//그리고 메소드 타입을 MemberDto해서 dto 객체를 return한다
 		//MemberDTO 타입으로 dto 객체를 만들면 회원정보가 담긴 dto객체가 생성된다
 		
-		
-		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getUserid());
-		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getPwd());
-		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getUsername());
-		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getPhone());
-		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getZipcode());
-		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getAddr1());
-		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getAddr2());
-		System.out.println("MemberDAO를 통해 받아온 dto값 : " + dto.getGrade());
-		
 		if(dto.getPwd().equals(pwd)) {//입력받은비번과 db에있는 비번이 같다면
 			//세션부여
 			HttpSession session = request.getSession();//세션객체받아옴
@@ -72,7 +62,7 @@ public class AuthLoginController  implements Controller{
 			System.out.println(session.getAttribute("grade"));
 			
 			//세션유지시간 설정
-			session.setMaxInactiveInterval(60*1); // 1분
+			session.setMaxInactiveInterval(60*30); // 30분
 			
 			//페이지이동(로그인한 메인메이지)
 			

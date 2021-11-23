@@ -40,7 +40,6 @@ public class MemberDAO {
 	
 	//멤버 조회
 	public MemberDTO memberSearch(String userid) {
-		System.out.println("MemberDAO의 memberSearch메소드 호출");
 		MemberDTO dto = null;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -54,7 +53,6 @@ public class MemberDAO {
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				System.out.println("rs.next()성공");
 				dto = new MemberDTO();
 				dto.setUserid(userid);
 				dto.setPwd(rs.getString("pwd"));
@@ -78,8 +76,6 @@ public class MemberDAO {
 	}//memberSearch 메소드 부분
 	
 	public String memberIdSearch(String id) {
-		System.out.println("memberIdSearch진입");
-		System.out.println("ajax에서 받아온 id 값 : " + id);
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
