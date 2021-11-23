@@ -5,10 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 </head>
 <body>
 <!-- 지도를 표시할 div 입니다 -->
-<div id="map" style="width:50%;height:350px;"></div>
+<div id="map" style="width:80%;height:350px;"></div>
 
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=47badb940ff84f575b85147a08b114c3"></script>
