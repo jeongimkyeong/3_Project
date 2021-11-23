@@ -79,7 +79,7 @@
                         <tr>
                             <th>글쓴이</th>
                             <td>
-                            <input name="username" type="text" style="width:100px;height:34px;border:1px solid #ddd;">
+                            <input name="username" type="text" value="<%=session.getAttribute("username")%>" readonly style="width:100px;height:34px;border:1px solid #ddd;">
                             </td>   
                         </tr>
                         <tr>

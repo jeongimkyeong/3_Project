@@ -50,7 +50,7 @@
 		document.readFrm.start.value=(page*numPerPage)-numPerPage;
 		document.readFrm.end.value=numPerPage;
 		//전송
-		document.readFrm.action="board/list.do";
+		document.readFrm.action="/board/list.do";
 		document.readFrm.submit();
 	}
 	
@@ -206,18 +206,17 @@
                 int pageEnd = ((pageStart + pagePerBlock)<=totalPage)?(pageStart+pagePerBlock):totalPage+1;
                 %>
                 <div class="paging">
-                    <a href="javascript:block('<%=(nowBlock*0)+1%>')"><img src="/img/fpage.gif" alt="처음페이지"></a>
+                   
                 <% 
-                if(nowBlock<1)
+                if(nowBlock>1)
                 {
                 %>
-                	<script>
-                	alert("이전 페이지가 없습니다.");
-                	</script>
+                	 <a href="javascript:block('<%=(nowBlock*0)+1%>')"><img src="/img/fpage.gif" alt="처음페이지"></a>
+					<a href="javascript:block('<%=nowBlock-1%>')"><img src="/img/back.gif" alt="이전페이지"></a>
                 <%	
                 }
                 %>                   
-                    <a href="javascript:block('<%=nowBlock-1%>')"><img src="/img/back.gif" alt="이전페이지"></a>                 
+                                     
         			<!-- 클릭했을 때 해당 블록으로 이동될 수 있도록 -->
         			<%
         				for(int i=pageStart;i<pageEnd;i++)
@@ -227,8 +226,16 @@
         			<%
         				}
         			%>
+        			
+        		<%
+        		if(totalBlock>nowBlock)
+        		{
+        		%>
                     <a href="javascript:block('<%=nowBlock+1%>')"><img src="/img/next.gif" alt="다음페이지"></a>
                     <a href="javascript:block('<%=totalBlock%>')"><img src="/img/lpage.gif" alt="마지막페이지"></a>
+                <%
+        		}
+                %>  
                 </div>
                 <div class="cbtn">
                 	<a href="/SubPage/Community/FreeBoard/Post.jsp" class="mbtn grey">글쓰기</a>
