@@ -5,24 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
-
 <%@ include file="/module/LoginJoinLink.jsp" %>
-
 </head>
-<script>
-	function loginCheck(){
-		if( loginform.userid.value==""){
-			alert("아이디를 입력하세요");
-			return loginform.userid.focus();
-		}
-		if(loginform.pwd.value==""){
-			alert("비밀번호를 입력하세요");
-			return loginform.pwd.focus();
-		}
-		loginform.submit();
-	}
-</script>
 <body>
 <%@ include file="/module/common/Header.jsp" %>
 <div class="sectioncontent">

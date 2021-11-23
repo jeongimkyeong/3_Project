@@ -15,7 +15,7 @@
 	            </h2>
             </a>
             <div class="leftb"> <!-- nlnb-->
-                <dl class="firstdl">
+                <dl class="leftbdl">
                     <dt>
                         <a href="/SubPage/Book/BasicBook/MainBasicBook.jsp">기본서</a>
                     </dt>
@@ -23,7 +23,7 @@
 		                <a href="/SubPage/Book/BasicBook/SubBasicBook/SubBasicBook.jsp">기본서1</a>
 	               </dd>
                 </dl>
-                <dl class="secondtdl">
+                <dl class="leftbdl">
                     <dt>
                         <a href="/SubPage/Book/TestWorkBook/MainTestWorkBook.jsp">문제집</a>
                     </dt>
@@ -31,7 +31,7 @@
                     	<a href="/SubPage/Book/TestWorkBook/SubTestWorkBook/SubTestWorkBook.jsp">문제집1</a>
                     </dd>
                 </dl>
-                <dl class="thirddl">
+                <dl class="leftbdl">
                     <dt>
                         <a href="/SubPage/Book/WorkBook/MainWorkBook.jsp">기출문제집</a>
                     </dt>
