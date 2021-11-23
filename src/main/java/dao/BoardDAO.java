@@ -120,11 +120,12 @@ public class BoardDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		int totalcnt=0;
+		
 		try {
 			conn = ds.getConnection();
 			String sql = "select count(*) from board_tbl";
 			pstmt=conn.prepareStatement(sql);
-			pstmt.executeQuery();
+			rs = pstmt.executeQuery();
 			
 			if(rs.next())
 			{
@@ -140,7 +141,42 @@ public class BoardDAO {
 		return totalcnt;
 	}
 	
-	
+
+	//해당 게시물 가져오기
+	public BoardDTO GetBoardDTO(int num) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		BoardDTO dto = null;
+		
+		try {
+			conn = ds.getConnection();
+			String sql = "select * from board_tbl where num=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			
+			//조회된 결과가 있고, 열을 한번 내렸을 때 값이 있다면
+			if(rs!=null && rs.next()) {
+				dto=new BoardDTO();
+				dto.setNum(rs.getInt("num"));
+				dto.setSubject(rs.getString("subject"));
+				dto.setContent(rs.getString("content"));
+				dto.setPwd(rs.getString("pwd"));
+				dto.setUsername(rs.getString("username"));
+				dto.setRegdate(rs.getString("regdate"));
+				dto.setCount(rs.getInt("count"));
+			}
+			
+		} catch (Exception e) {
+			
+		} finally {
+			try {conn.close();}catch(Exception e) {}
+			try {pstmt.close();}catch(Exception e) {}
+			try {rs.close();}catch(Exception e) {}
+		}
+		return dto;
+	}
 	
 	
 	

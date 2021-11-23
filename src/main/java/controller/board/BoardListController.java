@@ -13,7 +13,7 @@ public class BoardListController implements Controller{
 
 		@Override
 		public void execute(HttpServletRequest request, HttpServletResponse response) {
-			 
+			 	
 			//파라미터 가져오기(request객체의 getParameter()메서드로 사용자가 입력한 데이터 가져와 변수에 대입)
 			String s = request.getParameter("start");
 			String e = request.getParameter("end");
@@ -39,10 +39,12 @@ public class BoardListController implements Controller{
 			
 			//전체 게시물 수 받아오기
 			int tcnt = service.GetTotalCount();
+			System.out.println("TCNT : " + tcnt);
 			
 			//페이지 이동
 			request.setAttribute("list", list);
 			request.setAttribute("tcnt", tcnt);
+
 			HttpUtil.forward(request, response, "/SubPage/Community/FreeBoard/List.jsp");
 		}
 }
