@@ -39,14 +39,12 @@
 	            <div class="smenu">
 	                <ul>
 	                    <li>
-	                        <a href="#">학원소개</a>
+	                        <a href="/SubPage/Info/Information.jsp">학원소개</a>
 	                    </li>
 	                    <li>
-	                        <a href="#">오시는길</a>
+	                        <a href="/SubPage/Info/Map.jsp">오시는길</a>
 	                    </li>
-	                    <li>
-	                        <a href="#">영업시간안내</a>
-	                    </li>                                        
+	                                                           
 	                </ul>
 	                <ul>
 	                    <li>

@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="/css/Freepass.css"  type="text/css" rel="stylesheet">
-<link href="/css/Content9.css"  type="text/css" rel="stylesheet"> 
+<link href="/css/SignUp1.css"  type="text/css" rel="stylesheet">
+<link href="/css/SignUp2.css"  type="text/css" rel="stylesheet"> 
 
 </head>
 <body>
