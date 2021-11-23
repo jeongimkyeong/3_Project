@@ -41,8 +41,8 @@
 			</div>
 		</form>
 		<div class="findlink">
-			<a href="/module/Join/agreeJoin.jsp"><span>무료회원가입</span></a>
-			<a href="/module/Login/MemberFind.jsp">아이디/비밀번호찾기</a>
+			<a href="/module/member/Join/agreeJoin.jsp"><span>무료회원가입</span></a>
+			<a href="/module/member/Login/MemberFind.jsp">아이디/비밀번호찾기</a>
 		</div>
 	</div>
 </div>

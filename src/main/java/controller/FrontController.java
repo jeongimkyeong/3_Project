@@ -10,8 +10,10 @@ import controller.board.BoardListController;
 import controller.board.BoardPostController;
 import controller.board.BoardReadController;
 import controller.board.BoardUpdateController;
+import controller.member.memberDeleteController;
 import controller.member.memberJoinController;
 import controller.member.memberJoinIdCheck;
+import controller.member.memberUpdateController;
 import controller.member.memberJoinIdCheck;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -44,6 +46,11 @@ public class FrontController extends HttpServlet{
 		//가입
 		list.put("/member/join.do",new memberJoinController());
 		list.put("/member/joinidcheck.do",new memberJoinIdCheck());
+		
+		//회원수정
+		list.put("/auth/memberUpdate.do", new memberUpdateController());
+		//회원탈퇴
+		list.put("auth/memberDelete.do", new memberDeleteController());
 	}
 	
 
