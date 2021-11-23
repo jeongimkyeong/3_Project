@@ -28,7 +28,7 @@
 		</ul>
 	</div>
 	
-	<form name="agreeform" method="post" action="/module/Join/memberJoin.jsp">
+	<form name="agreeform" method="post" action="/module/member/Join/memberJoin.jsp">
 		<div class="checkbox">
 			<h2 class="subtitle">사이트 이용약관</h3>
 			<div class="infobox">

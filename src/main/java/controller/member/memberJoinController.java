@@ -35,7 +35,7 @@ public class memberJoinController implements Controller{
 		MemberDTO dto =  service.memberSearch(userid);
 
 			//비밀번호 일치확인
-			if(pwd.equals(pwdchk)) {
+		//	if(pwd.equals(pwdchk)) {
 				//dto에 파라미터값 담기
 				dto = new MemberDTO();
 				dto.setUserid(userid);
@@ -54,12 +54,12 @@ public class memberJoinController implements Controller{
 					HttpUtil.forward(request, response, "/MainPage.jsp");
 				}else {
 					request.setAttribute("msg", "회원가입에 실패.. 하셨습니다");
-					HttpUtil.forward(request, response, "/module/Join/memberJoin.jsp");
+					HttpUtil.forward(request, response, "/MainPage.jsp");
 				}
-			}else{
-				request.setAttribute("msg", "비밀번호를 확인해주세요");
-				HttpUtil.forward(request, response, "/module/Join/memberJoin.jsp");
-			}//if문 (비밀번호 일치확인)
+		//	}else{
+		//		request.setAttribute("msg", "비밀번호를 확인해주세요");
+		//		HttpUtil.forward(request, response, "/module/Join/memberJoin.jsp");
+		//	}//if문 (비밀번호 일치확인)
 			
 		
 	}

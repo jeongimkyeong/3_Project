@@ -8,12 +8,13 @@
 <%@ include file="/module/LoginJoinLink.jsp" %>
 </head>
 <body>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script> <!-- ajax 사용할수있는 jquery 링크 -->
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> <!-- 다음주소 api 사용링크 -->
 <script>
 
-	function useridchk(){
-		var a = inputform.useridunchk.value;
-		a = "idchk";
+	function useridchk(){//아이디 중복확인 눌렀을때 
+		var a = inputform.useridunchk.value; 
+		a = "idchk"; 
 		var userid = inputform.userid.value;
 		
 		if(userid === ""){
@@ -38,15 +39,38 @@
 					inputform.useridunchk.value="idchk";
 					
 				}
-				
-				
 			}
 		});
-	}
+	}//useridchk 함수부분
 	
-	function keyup(){
-		inputform.useridunchk.value="";
-	}
+	function keyup(){//아이디 입력란에 입력을 했을때(아이디중복확인을 했는데 아이디입력란에 수정을 하면 다시 아이디중복을 하도록하는함수)
+		inputform.useridunchk.value=""; 
+	}//keyup 함수부분
+	
+	
+	
+	function addrfunc(){//우편번호를 클릭했을때
+		
+		var zipcode = document.getElementById("zipcode");
+    	var addr1 = document.getElementById("addr1");
+		
+		new daum.Postcode({
+	        oncomplete: function(data) {
+	            
+	        	if(data.userSelectedType ==="R"){//사용자가 선택한 주소가 도로명주소일때
+	        		addr1.value = data.roadAddress;
+	        	
+	        	}else{//사용자가가 선택한 주소가 지번주소일때(J)
+	        		addr1.value = data.jibunAddress;
+	        	}
+	        	zipcode.value = data.zonecode;
+	        }
+		
+	    }).open();
+		document.getElementById("addr2").focus();
+		
+	}//addrfunc 함수부분
+	
 	function joinCheck(){
 		
 		if(inputform.userid.value == ""){
@@ -54,7 +78,7 @@
 			return inputform.userid.focus();
 		}
 	
-		if(inputform.useridunchk.value != "idchk"){
+		if(inputform.useridunchk.value != "idchk"){//
 			alert("아이디중복확인안했습니다");
 			return false;
 		}
@@ -66,11 +90,17 @@
 			alert("비밀번호확인이 입력되지 않았습니다");
 			return inputform.pwdchk.focus();
 		}
+		
+		if( inputform.pwd.value != inputform.pwdchk.value){
+			alert("비밀번호를 일치하게 입력하세요");
+			return inputform.pwdchk.focus();
+		}
+		
 		if(inputform.username.value == ""){
 			alert("이름이 입력되지 않았습니다");
 			return inputform.username.focus();
 		}
-		if(inputform.phone1.value == ""){
+		if(inputform.phone1.value == "" ){
 			alert("전화번호가 입력되지 않았습니다");
 			return inputform.phone1.focus();
 		}
@@ -95,7 +125,7 @@
 			return inputform.addr2.focus();
 		}
 		inputform.submit();
-	}
+	}//joinCheck 함수부분
 </script>
 
 <%@ include file="/module/common/Header.jsp" %>
@@ -128,7 +158,7 @@
 			<tr>
 				<th>비밀번호<span class="star">*</span></th>
 				<td>
-					<input type="password" name="pwd" class="logininput">
+					<input type="password" name="pwd" class="logininput" minlength="4">
 					<span class="star" style="font-size:13px;">*4자이상의 영문 및 숫자</span>
 				</td>
 			</tr>
@@ -140,26 +170,26 @@
 				<th>이름<span class="star">*</span></th>
 				<td><input type="text" name="username" class="logininput"></td>
 			</tr>
-			<tr>
+		 	<tr>
 				<th>휴대전화번호<span class="star">*</span></th>
 				<td>
-					<input type="text" name="phone1" class="logininput" style="width:50px">-
-					<input type="text" name="phone2" class="logininput" style="width:50px">-
-					<input type="text" name="phone3" class="logininput" style="width:50px">
+					<input type="text" name="phone1" class="logininput" style="width:50px" maxlength="3">-
+					<input type="text" name="phone2" class="logininput" style="width:50px" maxlength="4">-
+					<input type="text" name="phone3" class="logininput" style="width:50px" maxlength="4">
 				</td>
 			</tr>
 			<tr>
 				<th rowspan="3">주소<span class="star">*</span></th>
 				<td>
-					<input type="text" name="zipcode" class="logininput" style="width:70px" >
-					<a href="#" class="formbutton">우편번호</a>
+					<input type="text" name="zipcode" id="zipcode" class="logininput" style="width:70px" readonly>
+					<a class="formbutton" onclick="addrfunc()">우편번호</a>
 				</td>
 			</tr>
 			<tr>
-				<td><input type="text" name="addr1" class="logininput" style="width:600px"></td>
+				<td><input type="text" name="addr1" id="addr1" class="logininput" style="width:600px" readonly></td>
 			</tr>
 			<tr>
-				<td><input type="text" name="addr2" class="logininput" style="width:600px"></td>
+				<td><input type="text" name="addr2" id="addr2" class="logininput" style="width:600px"></td>
 			</tr>
 		</table>
 	
