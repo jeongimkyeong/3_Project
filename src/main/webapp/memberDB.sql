@@ -22,7 +22,7 @@ create table board_tbl(
 	username varchar(45) not null,
 	subject varchar(20) not null,
 	content text not null,
-	regdate DATETIME DEFAULT CURRENT_TIMESTAMP,
+	regdate DATE,
 	pwd varchar(15),
 	count int unsigned
 );
