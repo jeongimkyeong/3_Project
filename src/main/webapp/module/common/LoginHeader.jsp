@@ -13,7 +13,7 @@
         <!-- TOP 메뉴 -->
         <div class="tWrap">
             <h1>
-                <a href="/Main.jsp">
+                <a href="/MainPage.jsp">
                 <img src="/img/hLogo.png">
                 </a>
             </h1>
