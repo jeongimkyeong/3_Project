@@ -25,8 +25,7 @@ function addrfunc(){//우편번호를 클릭했을때
 	}//addrfunc 함수부분
 	
 	function updateCheck(){
-		
-		
+
 		if(inputform.pwd.value == ""){
 			alert("비밀번호가 입력되지 않았습니다");
 			return inputform.pwd.focus();
@@ -40,6 +39,7 @@ function addrfunc(){//우편번호를 클릭했을때
 			alert("비밀번호를 일치하게 입력하세요");
 			return inputform.pwdchk.focus();
 		}
+		
 		if(inputform.phone1.value == "" ){
 			alert("전화번호가 입력되지 않았습니다");
 			return inputform.phone1.focus();
@@ -181,3 +181,4 @@ function loginCheck(){
 		loginform.submit();
 	}
 /** 여기까지 Login.jsp 부분 */
+
