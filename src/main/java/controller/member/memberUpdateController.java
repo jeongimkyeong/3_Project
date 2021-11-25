@@ -30,7 +30,8 @@ public class memberUpdateController implements Controller{
 		request.setAttribute("zipcode", Integer.toString(dto.getZipcode()));
 		request.setAttribute("addr1", dto.getAddr1());
 		request.setAttribute("addr2", dto.getAddr2());
-
+		
+		request.setAttribute("pwd", dto.getPwd());
 		HttpUtil.forward(request, response, "/module/member/modify/MemberUpdate.jsp");
 		
 		

@@ -19,6 +19,8 @@
 		String zipcode = (String)request.getAttribute("zipcode");
 		String addr1 = (String)request.getAttribute("addr1");
 		String addr2 = (String)request.getAttribute("addr2");
+		
+		String pwd = (String)request.getAttribute("pwd");
 %>
 <div class="smain" >
     <div class="leftbWrap"> <!--nlnbWrap-->
@@ -78,12 +80,13 @@
 			회원기본정보
 			<em>(<span class="star">*</span>표시된 항목은 꼭 입력해 주셔야 수정이 가능합니다.)</em>
 		</h3>
-	    <form name="inputform" method="post" action="/member/join.do">
+	    <form name="inputform" method="post" action="/member/updateForm.do">
 			<table class="formtable" style="width:900px;">
 				<tr>
 					<th>아이디<span class="star">*</span></th>
 					<td>
 						<%=userid %>
+						<input type="hidden" name="userid" value="<%=userid%>">
 					</td>
 				</tr>
 				<tr>
@@ -129,7 +132,6 @@
 
 			<div class="checkbutton">
 				<input type="button" value="정보수정" class="chkbtninput" onclick="updateCheck()">
-				<a href="/MainPage.jsp">취소하기</a>
 			</div>
 		</form>
     </div>

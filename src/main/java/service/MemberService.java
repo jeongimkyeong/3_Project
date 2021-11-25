@@ -27,5 +27,9 @@ public class MemberService {
 		return dao.memberJoin(dto); //db에 회원가입창에서 입력한 값이 등록됬다면 true반환
 	}//memberJoin 메소드 부분
 	
+	public boolean memberUpdate(MemberDTO dto) {
+		return dao.memberUpdate(dto);
+	}
+	
 	
 }//MemberService class부분

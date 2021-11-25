@@ -88,7 +88,6 @@ public class MemberDAO {
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			if(rs != null) {//받아온 id 값이 db에 있따면
-				System.out.println("rs = null이 아닌 if문호출");
 				while(rs.next()) {
 					userid = rs.getString("userid");
 				}
@@ -139,6 +138,40 @@ public class MemberDAO {
 			return false;
 		}
 	}//memberJoin 메소드 부분
+	
+	
+	public boolean memberUpdate(MemberDTO dto) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int result=0;
+		
+		try {
+			conn = ds.getConnection();
+			String sql="update member_tbl set phone=?,zipcode=?,addr1=?,addr2=? where userid=? and pwd=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,dto.getPhone());
+			pstmt.setInt(2, dto.getZipcode());
+			pstmt.setString(3, dto.getAddr1());
+			pstmt.setString(4, dto.getAddr2());
+			pstmt.setString(5, dto.getUserid());
+			pstmt.setString(6, dto.getPwd());
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {conn.close();}catch(Exception e) {}
+			try {pstmt.close();}catch(Exception e) {}
+		}
+		if(result != 0 ) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}//memberUpdate 메소드 부분
+	
 	
 	
 	
