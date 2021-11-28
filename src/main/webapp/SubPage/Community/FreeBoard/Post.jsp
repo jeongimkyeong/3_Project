@@ -11,9 +11,20 @@
     <%@include file="/module/ConLink.jsp" %>
 </head>
 <body>
-
+<%
+	String msg=null;
+	msg = (String)request.getAttribute("msg");
+	System.out.println("MSG : " + msg);
+	if(msg!=null){
+	%>
+		<script>
+			alert("<%=msg%>"); //ID or PW 틀렸을 때 메시지 출력
+		</script>
+	<%
+	}
+%>
 <!-- Header -->
-<%@include file="/module/common/Header.jsp" %>
+<%@include file="/module/common/LoginHeader.jsp" %>
 
 
 <div class="smain">

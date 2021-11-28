@@ -6,10 +6,12 @@ import java.util.HashMap;
 import controller.auth.AuthLoginController;
 import controller.auth.AuthLogoutController;
 import controller.board.BoardDeleteController;
+import controller.board.BoardDeleteformController;
 import controller.board.BoardListController;
 import controller.board.BoardPostController;
 import controller.board.BoardReadController;
 import controller.board.BoardUpdateController;
+import controller.board.BoardUpdateformController;
 import controller.member.memberDeleteController;
 import controller.member.memberJoinController;
 import controller.member.memberJoinIdCheck;
@@ -41,7 +43,9 @@ public class FrontController extends HttpServlet{
 		list.put("/board/post.do",new BoardPostController());
 		list.put("/board/read.do",new BoardReadController());
 		list.put("/board/update.do",new BoardUpdateController());
+		list.put("/board/updateform.do",new BoardUpdateformController());
 		list.put("/board/delete.do",new BoardDeleteController());
+		list.put("/board/deleteform.do",new BoardDeleteformController());
 		
 		
 		//가입

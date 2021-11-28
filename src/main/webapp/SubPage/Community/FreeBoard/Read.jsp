@@ -22,6 +22,7 @@
 	System.out.println("end : " + request.getParameter("end"));
 %>
 <script>
+	//목록
 	function list() {
 		document.listFrm.nowPage.value=<%=request.getParameter("nowPage")%>;
 		document.listFrm.start.value=<%=request.getParameter("start")%>;
@@ -29,19 +30,50 @@
 		documnet.listFrm.action="/board/list.do";
 		documnet.listFrm.submit();
 	}
+	//수정
+	function updateform() {
+		document.updateFrm.nowPage.value=<%=request.getParameter("nowPage")%>;
+		document.updateFrm.start.value=<%=request.getParameter("start")%>;
+		document.updateFrm.end.value=<%=request.getParameter("end")%>;
+		document.updateFrm.num.value=<%=dto.getNum()%>;
+		document.updateFrm.action="/board/updateform.do";
+		document.updateFrm.submit();
+	}
+	//삭제
+	function delform() {
+		document.deleteFrm.nowPage.value=<%=request.getParameter("nowPage")%>;
+		document.deleteFrm.start.value=<%=request.getParameter("start")%>;
+		document.deleteFrm.end.value=<%=request.getParameter("end")%>;
+		document.deleteFrm.num.value=<%=dto.getNum()%>;
+		document.deleteFrm.action="/board/deleteform.do";
+		document.deleteFrm.submit();
+	}		
 </script>
-<form>
-	<form name="listFrm" method="get">
-		<input type="hidden" name="nowPage">
-		<input type="hidden" name="start">
-		<input type="hidden" name="end">
-	</form>
+
+<form name="deleteFrm" method="post">
+	<input type="hidden" name="num">
+	<input type="hidden" name="nowPage">
+	<input type="hidden" name="start">
+	<input type="hidden" name="end">
+</form>
+
+<form name="updateFrm" method="post">
+	<input type="hidden" name="num">
+	<input type="hidden" name="nowPage">
+	<input type="hidden" name="start">
+	<input type="hidden" name="end">
+</form>
+
+<form name="listFrm" method="get">
+	<input type="hidden" name="nowPage">
+	<input type="hidden" name="start">
+	<input type="hidden" name="end">
 </form>
 
 
 
 <!-- Header -->
-<%@include file="/module/common/Header.jsp" %>
+<%@include file="/module/common/LoginHeader.jsp" %>
 
 
 <div class="smain">
@@ -117,6 +149,8 @@
                 </table>
 		        	<div class="cbtn">
 		            	<a href="/board/list.do" class="mbtn ">목록으로</a>
+		            	<a href="javascript:updateform()" class="mbtn ">수정</a>
+		            	<a href="javascript:delform()" class="mbtn ">삭제</a>
 		           	</div>
 				<form>
 					<dl class="reple">

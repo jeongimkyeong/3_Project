@@ -55,10 +55,12 @@ public class AuthLoginController  implements Controller{
 			HttpSession session = request.getSession();//세션객체받아옴
 			//세션에 정보추가
 			session.setAttribute("userid", userid);//계정명 세션에추가
+			session.setAttribute("username", dto.getUsername());//이름 세션에추가
 			session.setAttribute("grade", dto.getGrade());//등급 세션에추가
 			
 			//등록한 세션값확인
 			System.out.println(session.getAttribute("userid"));
+			System.out.println(session.getAttribute("username"));
 			System.out.println(session.getAttribute("grade"));
 			
 			//세션유지시간 설정
