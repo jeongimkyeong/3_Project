@@ -205,8 +205,47 @@ public class BoardDAO {
 	}
 	
 	
+	//게시물 수정
+	public void UpdateBoard(BoardDTO dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = ds.getConnection();
+			String sql = "update board_tbl set subject=?, content=? where num=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, dto.getSubject());
+			pstmt.setString(2, dto.getContent());
+			pstmt.setInt(3, dto.getNum());
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {conn.close();}catch(Exception e) {}
+			try {pstmt.close();}catch(Exception e) {}
+		}
+	}
 	
 	
+	//게시물 삭제
+	public void DeleteBoard(int num) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		//업로드 파일이 있다면 삭제
+		try {
+			conn=ds.getConnection();
+			String sql = "delete from board_tbl where num=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {conn.close();}catch(Exception e) {}
+			try {pstmt.close();}catch(Exception e) {}
+		}		
+	}
 	
 	
 	

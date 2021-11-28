@@ -11,7 +11,24 @@
     <%@include file="/module/ConLink.jsp" %>
 </head>
 <body>
-<% 
+
+<%
+	String msg=null;
+	msg = (String)request.getAttribute("msg");
+	System.out.println("MSG : " + msg);
+	if(msg!=null){
+	%>
+		<script>
+			alert("<%=msg%>"); //ID or PW 틀렸을 때 메시지 출력
+		</script>
+	<%
+	}
+%>
+
+	
+
+
+<%
 	int totalRecode=0; 	//전체 게시물 수
 	int totalPage=0; 	//전체 페이지 수
 	int totalBlock=0;	//전체 블록 수
@@ -103,7 +120,7 @@
 	</form>
 	
 <!-- Header -->
-<%@include file="/module/common/Header.jsp" %>
+<%@include file="/module/common/LoginHeader.jsp" %>
 
 
 <div class="smain">

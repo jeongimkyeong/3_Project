@@ -46,6 +46,15 @@ public class BoardService {
 	}
 	
 	
+	//게시물 수정
+	public void UpdateBoard(BoardDTO dto) {
+		dao.UpdateBoard(dto);
+	}
+	
+	//게시물 삭제
+	public void DeleteBoard(int num) {
+		dao.DeleteBoard(num);
+	}
 	
 	
 }
