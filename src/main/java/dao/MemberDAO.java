@@ -172,9 +172,79 @@ public class MemberDAO {
 		
 	}//memberUpdate 메소드 부분
 	
+	public String memberIdFindSearch(MemberDTO dto) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String userid=null;
+		
+		try {
+			conn = ds.getConnection();
+			String sql="select userid from member_tbl where username=? and phone=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,dto.getUsername());
+			pstmt.setString(2, dto.getPhone());
+			rs = pstmt.executeQuery();
+			
+			
+			if(rs != null) {
+				rs.next();
+				userid = rs.getString("userid");
+			}else {
+				return null;
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {conn.close();}catch(Exception e) {}
+			try {pstmt.close();}catch(Exception e) {}
+			try {rs.close();}catch(Exception e) {}
+		}
+		
+		return userid;
+		
+		
+	}//memberIdFindSearch 메소드 부분
 	
-	
-	
+	public String memberPwdFindSearch(MemberDTO dto) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String pwd=null;
+		
+		try {
+			conn = ds.getConnection();
+			String sql="select pwd from member_tbl where userid=? and phone=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,dto.getUserid());
+			pstmt.setString(2, dto.getPhone());
+			rs = pstmt.executeQuery();
+			
+			
+			if(rs != null) {
+				rs.next();
+				pwd = rs.getString("pwd");
+			}else {
+				return null;
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {conn.close();}catch(Exception e) {}
+			try {pstmt.close();}catch(Exception e) {}
+			try {rs.close();}catch(Exception e) {}
+		}
+		
+		return pwd;
+		
+		
+	}//memberIdFindSearch 메소드 부분
 	
 	
 	

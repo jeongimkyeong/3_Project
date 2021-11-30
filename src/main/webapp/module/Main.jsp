@@ -9,6 +9,17 @@
 <%@include file="/module/ComLink.jsp" %>
 </head>
 <body>
+<%
+	String msg = null;
+	msg = (String)request.getAttribute("msg");
+	if(msg != null){
+		%>
+		<script>
+			alert("<%=msg%>");
+		</script>
+		<%
+	}
+%>
 	<div id="wrap">
 		<header id="header">
 			<%@include file="/module/common/LoginHeader.jsp" %>

@@ -39,10 +39,10 @@ public class memberUpdateFormController implements Controller{
 		if(update == true) {
 
 			request.setAttribute("msg", "회원수정 성공했습니다");
-			HttpUtil.forward(request, response, "/MainPage.jsp");
+			HttpUtil.forward(request, response, "/module/Main.jsp");
 		}else {
-				request.setAttribute("msg", "회원수정 실패했습니다");
-				HttpUtil.forward(request, response,"/MainPage.jsp");
+				request.setAttribute("msg", "비밀번호 일치하지않아 회원수정 실패했습니다");
+				HttpUtil.forward(request, response,"/module/Main.jsp");
 		}
 	}
 
