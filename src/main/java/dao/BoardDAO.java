@@ -217,6 +217,7 @@ public class BoardDAO {
 			pstmt.setString(1, dto.getSubject());
 			pstmt.setString(2, dto.getContent());
 			pstmt.setInt(3, dto.getNum());
+			pstmt.executeUpdate();
 			
 		} catch (Exception e) {
 			e.printStackTrace();

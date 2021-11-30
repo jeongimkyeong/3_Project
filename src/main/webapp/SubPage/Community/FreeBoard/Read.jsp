@@ -21,6 +21,7 @@
 	System.out.println("start : " + request.getParameter("start"));
 	System.out.println("end : " + request.getParameter("end"));
 %>
+<%session.setAttribute("dto", dto); %>
 <script>
 	//목록
 	function list() {
