@@ -8,6 +8,19 @@
 <%@ include file="/module/LoginJoinLink.jsp" %>
 </head>
 <body>
+<%
+	String msg=null;
+	msg = (String)request.getAttribute("msg");
+	System.out.println("MSG : " + msg);
+	if(msg!=null){
+	%>
+		<script>
+			//Controller에서 지정한 메시지 출력
+			alert("<%=msg%>");
+		</script>
+	<%
+	}
+%>
 <%@ include file="/module/common/Header.jsp" %>
 <div class="sectioncontent">
 	<div class="logincontent">

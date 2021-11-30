@@ -69,17 +69,11 @@ public class AuthorityFilter implements Filter{
 		//페이지별 접근 권한 처리
 		if(PageGradeNo>=1 && UserGradeNo==0)					//익명계정(0)이 1권한 이상의 페이지에 접근한 경우 오류메시지 출력
 		{
-			throw new ServletException("로그인이 필요한 페이지입니다.");
-//			request.setAttribute("msg","로그인이 필요한 페이지입니다.");//예외처리 오류메시지 날리고 로그인 창으로 보냄
-//			HttpUtil.forward((HttpServletRequest)request,(HttpServletResponse)response, "/module/member/Login/Login.jsp");
+			//throw new ServletException("로그인이 필요한 페이지입니다.");
+			request.setAttribute("msg","로그인이 필요한 페이지입니다.");//예외처리 오류메시지 날리고 로그인 창으로 보냄
+			HttpUtil.forward((HttpServletRequest)request,(HttpServletResponse)response, "/module/member/Login/Login.jsp");
 			
 		}
-		if(PageGradeNo>=2 && UserGradeNo<2)						//관리자 권한이 필요한 페이지(2)에 관리자가 아닌 계정이 요청한 경우
-		{
-			throw new ServletException("페이지 접근 권한이 없습니다.");
-
-		}
-		
 		chain.doFilter(request, response);						//지정된 위치로 데이터 전달
 		
 	}

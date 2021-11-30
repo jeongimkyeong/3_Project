@@ -18,7 +18,8 @@
 	if(msg!=null){
 	%>
 		<script>
-			alert("<%=msg%>"); //ID or PW 틀렸을 때 메시지 출력
+			//Controller에서 지정한 메시지 출력
+			alert("<%=msg%>");
 		</script>
 	<%
 	}
@@ -67,7 +68,8 @@
         
         
        <%@page import="dto.BoardDTO" %>
-       <% 
+       
+       <%      	
        	BoardDTO dto = (BoardDTO)session.getAttribute("dto");
        %> 
        
@@ -95,13 +97,13 @@
                         <tr>
                             <th>글쓴이</th>
                             <td>
-                            <input name="username" type="text" value="<%=dto.getUsername()%>" readonly style="width:100px;height:34px;border:1px solid #ddd;">
+                            <input name="username" type="text" value="<%=dto.getUsername() %>" readonly style="width:100px;height:34px;border:1px solid #ddd;">
                             </td>   
                         </tr>
                         <tr>
                             <th>내용</th>
                             <td>
-                            <textarea name="content" type="text" value="<%=dto.getContent()%>" rows="15" cols="80"></textarea>
+                            <textarea name="content" type="text" value="<%=dto.getContent() %>" rows="15" cols="80"></textarea>
                             </td>
                         </tr>
                         <tr>

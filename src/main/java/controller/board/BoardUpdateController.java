@@ -1,7 +1,5 @@
 package controller.board;
 
-import java.io.IOException;
-
 import controller.Controller;
 import controller.HttpUtil;
 import dto.BoardDTO;
@@ -24,11 +22,7 @@ public class BoardUpdateController implements Controller{
 		if(username.isEmpty()||pwd.isEmpty()||subject.isEmpty()||content.isEmpty())
 		{
 			request.setAttribute("msg", "입력이 올바르지 않습니다.");
-			try {
-				response.sendRedirect("/board/updateform.do");
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			HttpUtil.forward(request, response, "/board/updateform.do");
 		}
 		
 		//ID일치여부 확인 && 게시물 패스워드 일치 여부 확인
@@ -65,9 +59,6 @@ public class BoardUpdateController implements Controller{
 			request.setAttribute("msg", "수정 완료!");
 			HttpUtil.forward(request, response, "/board/read.do");
 		}
-				
-		//페이지 이동
-		HttpUtil.forward(request, response, "/board/read.do");
 	}
 
 }

@@ -19,13 +19,12 @@
 	if(msg!=null){
 	%>
 		<script>
-			alert("<%=msg%>"); //ID or PW 틀렸을 때 메시지 출력
+			//Controller에서 지정한 메시지 출력
+			alert("<%=msg%>");
 		</script>
 	<%
 	}
 %>
-
-	
 
 
 <%

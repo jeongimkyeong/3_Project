@@ -12,7 +12,19 @@
     <%@include file="/module/ConLink.jsp" %>
 </head>
 <body>
-
+<%
+	String msg=null;
+	msg = (String)request.getAttribute("msg");
+	System.out.println("MSG : " + msg);
+	if(msg!=null){
+	%>
+		<script>
+			//Controller에서 지정한 메시지 출력
+			alert("<%=msg%>"); 
+		</script>
+	<%
+	}
+%>
 <!-- DTO 가져오기 -->
 <%@page import="dto.*" %>
 <%
@@ -21,7 +33,9 @@
 	System.out.println("start : " + request.getParameter("start"));
 	System.out.println("end : " + request.getParameter("end"));
 %>
+
 <%session.setAttribute("dto", dto); %>
+
 <script>
 	//목록
 	function list() {
