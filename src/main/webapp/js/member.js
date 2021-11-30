@@ -182,3 +182,45 @@ function loginCheck(){
 	}
 /** 여기까지 Login.jsp 부분 */
 
+function memberIdFind(){
+	if(idfindform.username.value==""){
+		alert("이름을 입력하세요");
+		return idfindform.username.focus();
+	}
+	if(idfindform.phonef.value==""){
+		alert("휴대폰번호를 입력하세요");
+		return idfindform.phonef.focus();
+	}
+	if(idfindform.phones.value==""){
+		alert("휴대폰번호를 입력하세요");
+		return idfindform.phones.focus();
+	}
+	if(idfindform.phonet.value==""){
+		alert("휴대폰번호를 입력하세요");
+		return idfindform.phonet.focus();
+	}
+	idfindform.submit();
+}//memberIdFind 메소드 부분
+
+function memberPwdFind(){
+	if(pwdfindform.userid.value==""){
+		alert("아이디를 입력하세요");
+		return pwdfindform.userid.focus();
+	}
+	if(pwdfindform.phonef.value==""){
+		alert("휴대폰번호를 입력하세요");
+		return pwdfindform.phonef.focus();
+	}
+	if(pwdfindform.phones.value==""){
+		alert("휴대폰번호를 입력하세요");
+		return pwdfindform.phones.focus();
+	}
+	if(pwdfindform.phonet.value==""){
+		alert("휴대폰번호를 입력하세요");
+		return pwdfindform.phonet.focus();
+	}
+	pwdfindform.submit();
+	
+}//memberPwdFind 메소드 부분
+
+/**여기까지 MemberFind.jsp 부분 */

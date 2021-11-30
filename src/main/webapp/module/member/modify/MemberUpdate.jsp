@@ -55,10 +55,10 @@
                 </dl>
                 <dl class="leftbdl">
                     <dt>
-                        <a href="#">회원탈퇴</a>
+                        <a href="/member/memberDelete.do">회원탈퇴</a>
                     </dt>
                     <dd>
-                    	<a href="#">회원탈퇴</a>
+                    	<a href="/member/memberDelete.do">회원탈퇴</a>
                     </dd>
                 </dl>                                
             </div>

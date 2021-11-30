@@ -18,7 +18,7 @@
                 </a>
             </h1>
             <div class="tmenu">
-                <a onclick="location.href='/auth/memberUpdate.do'">정보수정</a>
+                <a onclick="location.href='/member/memberUpdate.do'">정보수정</a>
                 <a onclick="location.href='/auth/Logout.do'">로그아웃</a>
                 <a href="#">장바구니</a>
                 <a href="#">내강의실</a>

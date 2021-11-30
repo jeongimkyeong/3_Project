@@ -13,8 +13,10 @@ import controller.board.BoardReadController;
 import controller.board.BoardUpdateController;
 import controller.board.BoardUpdateformController;
 import controller.member.memberDeleteController;
+import controller.member.memberIdFindController;
 import controller.member.memberJoinController;
 import controller.member.memberJoinIdCheck;
+import controller.member.memberPwdFindController;
 import controller.member.memberUpdateController;
 import controller.member.memberUpdateFormController;
 import controller.member.memberJoinIdCheck;
@@ -53,11 +55,16 @@ public class FrontController extends HttpServlet{
 		list.put("/member/joinidcheck.do",new memberJoinIdCheck());
 		
 		//회원수정
-		list.put("/auth/memberUpdate.do", new memberUpdateController());
+		list.put("/member/memberUpdate.do", new memberUpdateController());
 		list.put("/member/updateForm.do", new memberUpdateFormController());
 		//회원탈퇴
-		list.put("auth/memberDelete.do", new memberDeleteController());
+		list.put("/member/memberDelete.do", new memberDeleteController());
+		
+		//회원 찾기
+		list.put("/member/memberIdFind.do",new memberIdFindController());
+		list.put("/member/memberPwdFind.do",new memberPwdFindController());
 	}
+
 	
 
 	@Override

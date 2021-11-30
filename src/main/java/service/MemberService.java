@@ -31,5 +31,13 @@ public class MemberService {
 		return dao.memberUpdate(dto);
 	}
 	
+	public String memberIdFindSearch(MemberDTO dto) {
+		return dao.memberIdFindSearch(dto);
+	}
+	
+	public String memberPwdFindSearch(MemberDTO dto) {
+		return dao.memberPwdFindSearch(dto);
+	}
+	
 	
 }//MemberService class부분
