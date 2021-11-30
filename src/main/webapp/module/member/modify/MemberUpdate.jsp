@@ -55,10 +55,10 @@
                 </dl>
                 <dl class="leftbdl">
                     <dt>
-                        <a href="/member/memberDelete.do">회원탈퇴</a>
+                        <a href="/module/member/modify/MemberDelete.jsp">회원탈퇴</a>
                     </dt>
                     <dd>
-                    	<a href="/member/memberDelete.do">회원탈퇴</a>
+                    	<a href="/module/member/modify/MemberDelete.jsp">회원탈퇴</a>
                     </dd>
                 </dl>                                
             </div>

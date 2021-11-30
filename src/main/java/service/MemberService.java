@@ -39,5 +39,9 @@ public class MemberService {
 		return dao.memberPwdFindSearch(dto);
 	}
 	
+	public boolean memberDelete(String userid) {
+		return dao.memberDelete(userid);
+	}
+	
 	
 }//MemberService class부분

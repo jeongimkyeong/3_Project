@@ -224,3 +224,15 @@ function memberPwdFind(){
 }//memberPwdFind 메소드 부분
 
 /**여기까지 MemberFind.jsp 부분 */
+
+function memberDelete(){
+
+	if(confirm("정말로 회원 탈퇴 하시겠습니까?")){
+		location.href='/member/memberDelete.do';
+	}else{
+		history.go(-1);
+	}
+}//memberDelete 메소드 부분
+
+
+/**여기까지 memberDelete.jsp부분 */

@@ -246,6 +246,42 @@ public class MemberDAO {
 		
 	}//memberIdFindSearch 메소드 부분
 	
+	public boolean memberDelete(String userid) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		int result=0;
+		
+		try {
+			conn = ds.getConnection();
+			String sql="delete from member_tbl where userid=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			result = pstmt.executeUpdate();
+			
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {conn.close();}catch(Exception e) {}
+			try {pstmt.close();}catch(Exception e) {}
+			try {rs.close();}catch(Exception e) {}
+		}
+		
+		if(result !=0) {
+			return true;
+		}else {
+			return false;
+		}
+		
+		
+	}//memberDelete 메소드 부분
+	
+	
+	
+	
 	
 	
 //	Connection conn = null;
